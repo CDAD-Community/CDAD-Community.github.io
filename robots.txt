@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mgriott.github.io/cdad-site/sitemap.xml
