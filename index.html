@@ -1,98 +1,1222 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CDAD - Context-Driven AI Development</title>
+    <title>CDAD — Context-Driven AI Development</title>
+
+    <meta name="description"
+          content="CDAD — Context-Driven AI Development. A governed approach to building software with AI coding agents.">
+
+    <meta name="keywords"
+          content="CDAD, Context-Driven AI Development, AI coding agents, context engineering, AI software development, software architecture">
+
+    <meta name="author" content="Moisés Griott">
 
     <style>
-        body {
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #07111f;
+            color: #e5edf7;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(7, 17, 31, 0.85);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 16px 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo img {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+
+            font-size: 14px;
+            color: #aebed1;
+        }
+
+        .nav-links a:hover {
             color: white;
+        }
+
+        .nav-github {
+            padding: 8px 15px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 7px;
+
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             text-align: center;
+
+            padding: 130px 20px 80px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    rgba(37,99,235,0.22),
+                    transparent 42%
+                );
         }
 
-        header {
-            padding: 60px 20px;
+        .hero-content {
+            max-width: 900px;
         }
 
-        .logo {
-            width: 180px;
-            height: auto;
-            margin-bottom: 30px;
+        .hero-logo {
+            width: 170px;
+            margin-bottom: 28px;
+
+            filter:
+                drop-shadow(0 0 30px rgba(59,130,246,0.25));
         }
 
-        h1 {
-            font-size: 48px;
-            margin: 10px 0;
+        .badge {
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            border-radius: 999px;
+
+            border: 1px solid rgba(96,165,250,0.3);
+
+            background: rgba(37,99,235,0.08);
+
+            color: #93c5fd;
+
+            font-size: 13px;
+
+            margin-bottom: 25px;
         }
 
-        h2 {
-            font-weight: normal;
-            color: #94a3b8;
+        .hero h1 {
+            font-size: clamp(52px, 8vw, 90px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 18px;
         }
 
-        p {
-            font-size: 20px;
-            color: #cbd5e1;
+        .hero h1 span {
+            color: #60a5fa;
         }
 
-        .buttons {
-            margin-top: 35px;
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 30px);
+
+            font-weight: 400;
+
+            color: #b9c8d9;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 720px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            color: #94a9bf;
+        }
+
+        .hero-buttons {
+            margin-top: 38px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
         }
 
         .button {
-            display: inline-block;
-            padding: 14px 25px;
-            margin: 8px;
+            padding: 13px 23px;
+
             border-radius: 8px;
-            text-decoration: none;
-            color: white;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .button-primary {
             background: #2563eb;
         }
 
-        .button.github {
-            background: #334155;
+        .button-primary:hover {
+            background: #3b82f6;
+
+            transform: translateY(-2px);
         }
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.15);
+
+            background: rgba(255,255,255,0.03);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 55px;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #8fa4ba;
+        }
+
+        /* =========================
+           PROBLEM
+        ========================= */
+
+        .problem {
+            background: #0a1626;
+        }
+
+        .problem-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+            padding: 28px;
+
+            border-radius: 12px;
+
+            background: rgba(255,255,255,0.025);
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #8fa4ba;
+            font-size: 15px;
+        }
+
+        .icon {
+            font-size: 27px;
+
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           APPROACH
+        ========================= */
+
+        .flow {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(160px, 1fr));
+
+            gap: 15px;
+
+            align-items: center;
+        }
+
+        .flow-item {
+            text-align: center;
+
+            padding: 28px 15px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(96,165,250,0.18);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(37,99,235,0.09),
+                    rgba(255,255,255,0.015)
+                );
+        }
+
+        .flow-number {
+            display: inline-flex;
+
+            width: 34px;
+            height: 34px;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            font-size: 13px;
+
+            margin-bottom: 13px;
+        }
+
+        .flow-item h3 {
+            font-size: 17px;
+        }
+
+        .flow-item p {
+            color: #8298af;
+
+            font-size: 13px;
+
+            margin-top: 6px;
+        }
+
+        .arrow {
+            text-align: center;
+
+            color: #4776a8;
+
+            font-size: 22px;
+        }
+
+        /* =========================
+           CPP
+        ========================= */
+
+        .cpp {
+            background: #0a1626;
+        }
+
+        .architecture {
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            border-radius: 14px;
+
+            background: #06101d;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            font-family:
+                "SFMono-Regular",
+                Consolas,
+                monospace;
+
+            color: #9fc4eb;
+        }
+
+        .architecture-line {
+            margin: 10px 0;
+        }
+
+        .architecture-highlight {
+            color: #60a5fa;
+        }
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        /* =========================
+           AGENTS
+        ========================= */
+
+        .agents {
+            text-align: center;
+        }
+
+        .agent-list {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .agent {
+            padding: 10px 17px;
+
+            border-radius: 7px;
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            color: #b9c8d9;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           OPEN SOURCE
+        ========================= */
+
+        .opensource {
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(37,99,235,0.12),
+                    transparent 60%
+                );
+        }
+
+        .opensource h2 {
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+        .opensource p {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #8fa4ba;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 20px;
+
+            text-align: center;
+
+            border-top: 1px solid rgba(255,255,255,0.07);
+
+            color: #64788e;
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .nav-links a:not(.nav-github) {
+                display: none;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            section {
+                padding: 75px 20px;
+            }
+
+            .arrow {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <header>
 
-        <img src="cdad.png"
-             alt="CDAD Logo"
-             class="logo">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-        <h1>CDAD</h1>
+<nav>
 
-        <h2>Context-Driven AI Development</h2>
+    <div class="nav-container">
 
-        <p>
-            Govern the context.<br>
-            Guide the agent.<br>
-            Protect the software.
-        </p>
+        <a href="#" class="nav-logo">
 
-        <div class="buttons">
+            <img src="cdad.png"
+                 alt="CDAD">
 
-            <a class="button"
-               href="https://github.com/mgriott/cdad-bootstrap">
-                Get Started
-            </a>
+            <span>CDAD</span>
 
-            <a class="button github"
-               href="https://github.com/mgriott/cdad-bootstrap">
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="#problem">Problem</a>
+
+            <a href="#approach">Approach</a>
+
+            <a href="#cpp">CPP</a>
+
+            <a href="#agents">Agents</a>
+
+            <a
+                href="https://github.com/mgriott/cdad-bootstrap"
+                class="nav-github"
+                target="_blank">
+
                 GitHub
+
             </a>
 
         </div>
 
-    </header>
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="cdad.png"
+            alt="CDAD Logo"
+            class="hero-logo">
+
+
+        <div class="badge">
+
+            Open Source • AI Software Development
+
+        </div>
+
+
+        <h1>
+
+            <span>CDAD</span>
+
+        </h1>
+
+
+        <h2>
+
+            Context-Driven AI Development
+
+        </h2>
+
+
+        <p class="hero-description">
+
+            A governed approach to building software with
+            AI coding agents — combining context,
+            specifications, rules and protection patterns
+            to produce more reliable software.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://github.com/mgriott/cdad-bootstrap"
+                target="_blank"
+                class="button button-primary">
+
+                Get Started
+
+            </a>
+
+
+            <a
+                href="https://github.com/mgriott/cdad-bootstrap"
+                target="_blank"
+                class="button button-secondary">
+
+                View on GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     PROBLEM
+========================= -->
+
+<section id="problem" class="problem">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>The Problem</h2>
+
+            <p>
+
+                AI coding agents are powerful,
+                but software development requires
+                more than generating code.
+
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+
+            <div class="card">
+
+                <div class="icon">🧠</div>
+
+                <h3>Context Loss</h3>
+
+                <p>
+
+                    Agents can lose important architectural,
+                    business and technical context during
+                    development.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">⚠️</div>
+
+                <h3>Uncontrolled Changes</h3>
+
+                <p>
+
+                    Without explicit boundaries,
+                    an agent may modify parts of the
+                    system it should not touch.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔄</div>
+
+                <h3>Inconsistent Decisions</h3>
+
+                <p>
+
+                    Different prompts and sessions can
+                    produce different implementations
+                    of the same architectural intent.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🛡️</div>
+
+                <h3>Governance</h3>
+
+                <p>
+
+                    AI-assisted development needs
+                    explicit rules, responsibilities
+                    and controlled context.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     APPROACH
+========================= -->
+
+<section id="approach">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>The CDAD Approach</h2>
+
+            <p>
+
+                Context becomes an explicit,
+                governed part of software development.
+
+            </p>
+
+        </div>
+
+
+        <div class="flow">
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">1</div>
+
+                <h3>Specification</h3>
+
+                <p>
+
+                    Define what the system must do.
+
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">2</div>
+
+                <h3>Context</h3>
+
+                <p>
+
+                    Provide the relevant project knowledge.
+
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">3</div>
+
+                <h3>Governance</h3>
+
+                <p>
+
+                    Define rules and boundaries.
+
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">4</div>
+
+                <h3>AI Agent</h3>
+
+                <p>
+
+                    Execute development tasks.
+
+                </p>
+
+            </div>
+
+
+            <div class="arrow">→</div>
+
+
+            <div class="flow-item">
+
+                <div class="flow-number">5</div>
+
+                <h3>Software</h3>
+
+                <p>
+
+                    Produce validated changes.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CPP
+========================= -->
+
+<section id="cpp" class="cpp">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Context Protection Pattern</h2>
+
+            <p>
+
+                CDAD introduces explicit protection
+                around the context that governs the agent.
+
+            </p>
+
+        </div>
+
+
+        <div class="architecture">
+
+            <div class="architecture-line">
+
+                AI Coding Agent
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;↓
+
+            </div>
+
+
+            <div class="architecture-line architecture-highlight">
+
+                Governed Context
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Project Context
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Architecture
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Rules
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Constraints
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;└── Protected Context
+
+            </div>
+
+
+            <div class="architecture-line">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;↓
+
+            </div>
+
+
+            <div class="architecture-line architecture-highlight">
+
+                Controlled Implementation
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BENEFITS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Why CDAD?</h2>
+
+            <p>
+
+                Designed for teams building software
+                with AI as an active development partner.
+
+            </p>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+            <div class="card">
+
+                <div class="icon">🎯</div>
+
+                <h3>Consistency</h3>
+
+                <p>
+
+                    Keep architectural and technical
+                    decisions consistent across
+                    AI-assisted development sessions.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔐</div>
+
+                <h3>Control</h3>
+
+                <p>
+
+                    Establish explicit boundaries
+                    for what AI agents can read,
+                    change and generate.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📚</div>
+
+                <h3>Knowledge</h3>
+
+                <p>
+
+                    Turn project knowledge into
+                    structured context that agents
+                    can consume.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🚀</div>
+
+                <h3>Productivity</h3>
+
+                <p>
+
+                    Reduce repetitive explanations
+                    and spend more time on engineering
+                    decisions.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🏗️</div>
+
+                <h3>Architecture</h3>
+
+                <p>
+
+                    Preserve architectural intent
+                    while using AI to accelerate
+                    implementation.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🧪</div>
+
+                <h3>Validation</h3>
+
+                <p>
+
+                    Combine governed context with
+                    tests and engineering validation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     AGENTS
+========================= -->
+
+<section id="agents" class="agents">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Designed for AI Coding Agents</h2>
+
+            <p>
+
+                CDAD is an approach, not a replacement
+                for your preferred development agent.
+
+            </p>
+
+        </div>
+
+
+        <div class="agent-list">
+
+            <div class="agent">Claude Code</div>
+
+            <div class="agent">Kiro</div>
+
+            <div class="agent">Cursor</div>
+
+            <div class="agent">Qwen Code</div>
+
+            <div class="agent">GitHub Copilot</div>
+
+            <div class="agent">Other AI Agents</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     OPEN SOURCE
+========================= -->
+
+<section class="opensource">
+
+    <div class="container">
+
+        <h2>Explore CDAD</h2>
+
+        <p>
+
+            CDAD is an open approach to governed,
+            context-driven software development
+            with AI.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://github.com/mgriott/cdad-bootstrap"
+                target="_blank"
+                class="button button-primary">
+
+                ⭐ View on GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        CDAD — Context-Driven AI Development
+
+    </p>
+
+    <p>
+
+        Open Source • AI-Assisted Software Development
+
+    </p>
+
+</footer>
+
 
 </body>
 </html>
