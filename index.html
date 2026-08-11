@@ -31,10 +31,16 @@
     <meta property="og:url"
           content="https://mgriott.github.io/cdad-site/">
 
+    <meta property="og:image"
+          content="https://mgriott.github.io/cdad-site/cdad.png">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CDAD — Context-Driven AI Development">
     <meta name="twitter:description"
           content="A governed approach to building software with AI coding agents.">
+    <meta name="twitter:image"
+          content="https://mgriott.github.io/cdad-site/cdad.png">
+
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -338,18 +344,61 @@
             section { padding: 75px 20px; }
         }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "CDAD — Context-Driven AI Development",
+      "description": "CDAD is a governance approach for AI-assisted software development that combines specifications, governed context, rules, architecture and protection patterns for AI coding agents.",
+      "author": {
+        "@type": "Person",
+        "name": "Moisés Griott"
+      },
+      "url": "https://mgriott.github.io/cdad-site/",
+      "keywords": [
+        "CDAD",
+        "Context-Driven AI Development",
+        "Spec-Driven Development",
+        "SDD",
+        "Context Engineering",
+        "AI coding agents",
+        "AI-assisted software development",
+        "AI agent governance",
+        "context governance"
+      ],
+      "about": [
+        "AI-assisted software development",
+        "Spec-Driven Development",
+        "Context Engineering",
+        "AI coding agent governance"
+      ],
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CDAD",
+        "url": "https://mgriott.github.io/cdad-site/"
+      }
+    }
+    </script>
 </head>
 
 <body>
 
 <nav>
     <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <img src="cdad.png" alt="CDAD">
+            <span>CDAD</span>
+        </a>
+
         <div class="nav-links">
             <a href="#problem">Problem</a>
             <a href="#approach">Approach</a>
             <a href="#ecosystem">Ecosystem</a>
             <a href="#cpp">CPP</a>
             <a href="#agents">Agents</a>
+            <a href="#sdd">SDD</a>
+            <a href="#faq">FAQ</a>
             <a href="https://github.com/mgriott/cdad-bootstrap"
                class="nav-github" target="_blank" rel="noopener">
                 GitHub
@@ -360,6 +409,8 @@
 
 <header class="hero">
     <div class="hero-content">
+        <img src="cdad.png" alt="CDAD Logo" class="hero-logo">
+
         <div class="badge">Open Source • AI Software Development</div>
 
         <h1><span>CDAD</span></h1>
@@ -367,9 +418,9 @@
         <h2>Context-Driven AI Development</h2>
 
         <p class="hero-description">
-            A governed approach to building software with AI coding agents —
-            combining context, specifications, rules and protection patterns
-            to produce more reliable software.
+            A governed approach to AI-assisted software development and AI coding agents —
+            combining specifications, governed context, architecture, rules and
+            protection patterns to preserve engineering intent and reduce architectural drift.
         </p>
 
         <div class="hero-buttons">
@@ -377,6 +428,12 @@
                target="_blank" rel="noopener"
                class="button button-primary">
                 Get Started
+            </a>
+
+            <a href="https://github.com/mgriott/cdad-bootstrap"
+               target="_blank" rel="noopener"
+               class="button button-secondary">
+                View on GitHub
             </a>
         </div>
     </div>
@@ -526,6 +583,189 @@
     </div>
 </section>
 
+
+<section id="sdd">
+    <div class="container">
+        <div class="section-header">
+            <h2>CDAD and SDD</h2>
+            <p>
+                CDAD complements Spec-Driven Development (SDD) by adding a governance
+                model for the context, architecture and rules consumed by AI coding agents.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>What SDD provides</h3>
+                <p>
+                    Specification-Driven Development makes requirements, expected behavior
+                    and implementation intent explicit and reviewable.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>What CDAD adds</h3>
+                <p>
+                    CDAD treats project context, architectural decisions, constraints and
+                    agent rules as governed engineering assets that can be protected and validated.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>How they work together</h3>
+                <p>
+                    SDD can define what should be built; CDAD governs the context and
+                    boundaries that guide an AI agent while it builds it.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Context Engineering</h3>
+                <p>
+                    Context Engineering focuses on designing useful context for AI systems.
+                    CDAD applies that idea to software development with explicit governance,
+                    architecture preservation and protection mechanisms.
+                </p>
+            </div>
+        </div>
+
+        <div class="architecture" style="margin-top:35px;">
+            <div class="architecture-line architecture-highlight">
+                Software Development with AI
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── SDD / Specifications
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Context Engineering
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Architecture &amp; Constraints
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;└── AI Coding Agents
+            </div>
+            <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+            <div class="architecture-line architecture-highlight">
+                CDAD — Governed Context &amp; AI Development
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="when">
+    <div class="container">
+        <div class="section-header">
+            <h2>When Should You Use CDAD?</h2>
+            <p>
+                CDAD is particularly useful when AI agents participate actively in
+                implementation and architectural consistency matters.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <div class="icon">🏢</div>
+                <h3>Existing Systems</h3>
+                <p>
+                    Use CDAD when agents must work safely inside an existing architecture
+                    with established conventions and dependencies.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>AI Coding Agents</h3>
+                <p>
+                    Use CDAD when Claude Code, Kiro, Codex, Cursor, Copilot or other
+                    AI development agents become part of the engineering workflow.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧭</div>
+                <h3>Architecture Governance</h3>
+                <p>
+                    Use CDAD when architectural decisions must remain explicit,
+                    reviewable and protected from unintended agent changes.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔁</div>
+                <h3>Long-Lived Projects</h3>
+                <p>
+                    Use CDAD when multiple sessions, agents and developers need to
+                    preserve the same project knowledge and engineering intent.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="ecosystem">
+    <div class="container">
+        <div class="section-header">
+            <h2>CDAD Frequently Asked Questions</h2>
+            <p>
+                A concise reference for developers, architects and AI agents discovering CDAD.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Is CDAD a replacement for SDD?</h3>
+                <p>
+                    No. CDAD complements SDD. SDD focuses on explicit specifications;
+                    CDAD focuses on governing the context, architecture, rules and
+                    boundaries used by AI-assisted development.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Is CDAD an AI coding agent?</h3>
+                <p>
+                    No. CDAD is a methodology and governance approach that can be
+                    applied around different AI coding agents and development tools.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>What is the Context Protection Pattern?</h3>
+                <p>
+                    CPP is a CDAD pattern for protecting governed project context and
+                    making changes to critical engineering knowledge deliberate and reviewable.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>What is CDAD trying to prevent?</h3>
+                <p>
+                    A central concern is architectural drift: individually reasonable
+                    AI-generated changes that gradually move a system away from its intended design.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Does CDAD depend on one AI vendor?</h3>
+                <p>
+                    No. The approach is intended to be portable across AI coding agents
+                    and development environments.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Where can I start?</h3>
+                <p>
+                    Start with the open-source CDAD Bootstrap project, understand the
+                    governed context structure, then adapt the rules and protection
+                    mechanisms to your project.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="cpp">
     <div class="container">
         <div class="section-header">
@@ -661,12 +901,27 @@
             CDAD is an open approach to governed, context-driven software
             development with AI.
         </p>
+
+        <div class="hero-buttons">
+            <a href="https://github.com/mgriott/cdad-bootstrap"
+               target="_blank" rel="noopener"
+               class="button button-primary">
+                ⭐ View on GitHub
+            </a>
+        </div>
+
+        <div style="margin-top:32px; color:#8298af; font-size:14px;">
+            <p>
+                CDAD is an evolving open-source methodology. Contributions, experiments,
+                implementations and critical feedback are welcome.
+            </p>
+        </div>
     </div>
 </section>
 
 <footer>
     <p>CDAD — Context-Driven AI Development</p>
-    <p>Open Source • AI-Assisted Software Development</p>
+    <p>Open Source • AI-Assisted Software Development • SDD • Context Engineering • AI Coding Agents</p>
 </footer>
 
 </body>
