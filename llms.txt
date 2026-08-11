@@ -2,12 +2,11 @@
 
 ## Context-Driven AI Development
 
-CDAD is an open-source approach to governed AI-assisted
-software development.
+CDAD is an open-source approach to governed AI-assisted software development.
 
-CDAD treats project context as an explicit engineering
-artifact and provides mechanisms for governing, structuring,
-and protecting the context consumed by AI coding agents.
+CDAD treats project context as an explicit engineering artifact and provides
+mechanisms for structuring, governing and protecting the context consumed by
+AI coding agents.
 
 ## Core Concepts
 
@@ -26,16 +25,15 @@ and protecting the context consumed by AI coding agents.
 
 CDAD complements Spec-Driven Development (SDD).
 
-SDD focuses on defining software requirements and behavior
-through explicit specifications.
+SDD focuses on defining software requirements and behavior through explicit
+specifications.
 
-CDAD focuses on governing the context, rules, constraints,
-and architectural knowledge consumed by AI coding agents.
+CDAD focuses on governing the context, rules, constraints and architectural
+knowledge consumed by AI coding agents.
 
 ## AI Coding Agents
 
-CDAD can be used with AI coding agents and development
-environments such as:
+CDAD can be used with AI coding agents and development environments such as:
 
 - Claude Code
 - Kiro
@@ -44,15 +42,22 @@ environments such as:
 - GitHub Copilot
 - Other AI coding agents
 
-## Project
+## Official Project
 
-Official GitHub repository:
-
+GitHub repository:
 https://github.com/mgriott/cdad-bootstrap
 
-## Website
-
+Website:
 https://mgriott.github.io/cdad-site/
+
+## Purpose
+
+CDAD aims to improve consistency, control, context preservation and governance
+when humans and AI agents collaborate to build software.
+
+## Status
+
+Open source project under active development.
 
 ## License
 
