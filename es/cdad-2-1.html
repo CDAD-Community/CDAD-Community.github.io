@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAD 2.1 — Implementación de Referencia Actual</title>
+    <meta name="description" content="Explora la implementación actual de CDAD 2.1 con estructura de workspace, contexto gobernado y ejemplos de integración.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/es/cdad-2-1">
+    <meta property="og:title" content="CDAD 2.1">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/es/cdad-2-1">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/cdad-2-1">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/cdad-2-1">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/cdad-2-1">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/es/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/es/">Inicio</a>
+            <a href="/cdad-site/es/acerca">Acerca</a>
+            <a href="/cdad-site/es/problema">Problema</a>
+            <a href="/cdad-site/es/enfoque">Enfoque</a>
+            <a href="/cdad-site/es/ecosistema">Ecosistema</a>
+            <a href="/cdad-site/es/metodologia">Metodología</a>
+            <a href="/cdad-site/es/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/es/preguntas-frecuentes">Preguntas</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1><span>CDAD 2.1</span></h1>
+        <h2>Implementación de Referencia Actual</h2>
+        <p class="hero-description">
+            CDAD 2.1 es la implementación de referencia actual que proporciona un workspace de proyecto gobernado con contexto explícito, decisiones arquitectónicas e integración de agentes.
+        </p>
+    </div>
+</header>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>¿Qué es CDAD 2.1?</h2>
+            <p>
+                CDAD 2.1 es una implementación concreta de la metodología CDAD que proporciona estructura de gobernanza e integración con agentes de IA de codificación.
+            </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; color: #8fa4ba; line-height: 1.8; font-size: 16px;">
+            <p style="margin-bottom: 20px;">
+                El bootstrap introduce un <strong>workspace gobernado</strong> que contiene artefactos de gobernanza y contexto como:
+            </p>
+
+            <ul style="margin: 20px 0 20px 30px; color: #8fa4ba;">
+                <li style="margin-bottom: 8px;"><strong>AGENTS.md</strong> — Instrucciones de agentes y gobernanza</li>
+                <li style="margin-bottom: 8px;"><strong>CHANGE-REQUEST.md</strong> — Plantilla para cambios propuestos</li>
+                <li style="margin-bottom: 8px;"><strong>cdad/context/</strong> — Contexto de proyecto gobernado (L0)</li>
+                <li style="margin-bottom: 8px;"><strong>cdad/adr/</strong> — Registros de Decisiones Arquitectónicas (L1)</li>
+                <li style="margin-bottom: 8px;"><strong>cdad/proposals/</strong> — Propuestas pendientes de revisión</li>
+                <li style="margin-bottom: 8px;"><strong>cdad/scripts/</strong> — Scripts de validación y gobernanza</li>
+                <li style="margin-bottom: 8px;"><strong>.claude/, .kiro/</strong> — Configuración específica del agente</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Estructura del Workspace</h2>
+            <p>
+                El workspace CDAD organiza artefactos de gobernanza e implementación.
+            </p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <div class="architecture">
+                <div class="architecture-line">/</div>
+                <div class="architecture-line">├── INDEX.md</div>
+                <div class="architecture-line">├── AGENTS.md</div>
+                <div class="architecture-line">├── CHANGE-REQUEST.md</div>
+                <div class="architecture-line">│</div>
+                <div class="architecture-line">├── cdad/</div>
+                <div class="architecture-line">│   ├── README.md</div>
+                <div class="architecture-line">│   ├── context/          (L0: Gobernado)</div>
+                <div class="architecture-line">│   │   ├── stack.md</div>
+                <div class="architecture-line">│   │   ├── principles.md</div>
+                <div class="architecture-line">│   │   └── constraints.md</div>
+                <div class="architecture-line">│   ├── adr/              (L1: Decisiones)</div>
+                <div class="architecture-line">│   ├── proposals/        (Bajo revisión)</div>
+                <div class="architecture-line">│   └── scripts/          (Gobernanza)</div>
+                <div class="architecture-line">│</div>
+                <div class="architecture-line">├── .claude/             (Configuración de Claude Code)</div>
+                <div class="architecture-line">└── .kiro/               (Configuración de Kiro)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Agentes Soportados</h2>
+            <p>
+                CDAD 2.1 proporciona integraciones para múltiples agentes de IA de codificación.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Claude Code</h3>
+                <p>
+                    Configuración a través del directorio `.claude/` con reglas CLAUDE.md y gobernanza en settings.json.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Kiro</h3>
+                <p>
+                    Configuración a través del directorio `.kiro/` con manifiestos de dirección y directivas de gobernanza.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cursor & Otros</h3>
+                <p>
+                    El enfoque portable de gobernanza funciona con otros agentes de IA de codificación y entornos de desarrollo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Metodología Primero</h3>
+                <p>
+                    CDAD no está vinculado a ningún agente específico. La metodología es portable entre herramientas.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Comenzando</h2>
+            <p>
+                Cómo usar CDAD 2.1 en tu proyecto.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card" style="grid-column: span 2;">
+                <h3>Repositorio Oficial de Bootstrap</h3>
+                <p>
+                    <strong>https://github.com/CDAD-Community/cdad-bootstrap</strong><br><br>
+                    El proyecto bootstrap es la implementación de referencia autoritativa. Clónalo, adáptalo a tu proyecto y sigue el proceso de configuración documentado.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>1. Inicializar</h3>
+                <p>
+                    Clona bootstrap y adapta la estructura del workspace a tu proyecto.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>2. Establecer Contexto</h3>
+                <p>
+                    Define arquitectura, principios y restricciones explícitamente en cdad/context/.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>3. Integración de Agentes</h3>
+                <p>
+                    Configura .claude/ o .kiro/ con reglas de gobernanza específicas para tus agentes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>4. Freeze</h3>
+                <p>
+                    Revisa y ratifica tu contexto gobernado a través del proceso de freeze.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>5. Trabajo</h3>
+                <p>
+                    Comienza desarrollo con agentes trabajando dentro de los límites gobernados.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Código Abierto • Desarrollo de Software Asistido por IA • SDD • Context Engineering • Agentes de IA</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

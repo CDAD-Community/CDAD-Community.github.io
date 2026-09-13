@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAD Preguntas Frecuentes</title>
+    <meta name="description" content="Preguntas comunes sobre CDAD, sus conceptos, relaciones con otras metodologías y cómo empezar.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/es/preguntas-frecuentes">
+    <meta property="og:title" content="CDAD Preguntas Frecuentes">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/es/preguntas-frecuentes">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/faq">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/preguntas-frecuentes">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/faq">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/es/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/es/">Inicio</a>
+            <a href="/cdad-site/es/acerca">Acerca</a>
+            <a href="/cdad-site/es/problema">Problema</a>
+            <a href="/cdad-site/es/enfoque">Enfoque</a>
+            <a href="/cdad-site/es/ecosistema">Ecosistema</a>
+            <a href="/cdad-site/es/metodologia">Metodología</a>
+            <a href="/cdad-site/es/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/es/preguntas-frecuentes">Preguntas</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 50vh;">
+    <div class="hero-content">
+        <h1><span>Preguntas Frecuentes</span></h1>
+        <h2>CDAD Respondido</h2>
+        <p class="hero-description">
+            Preguntas comunes sobre CDAD, sus conceptos y cómo empezar.
+        </p>
+    </div>
+</header>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="color: #8fa4ba; line-height: 1.8;">
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Qué es CDAD?</h3>
+                <p style="margin-bottom: 20px;">
+                    CDAD (Context-Driven AI Development) es una metodología de código abierto para desarrollo de software asistido por IA gobernado. Proporciona una capa de gobernanza alrededor de agentes de IA de codificación para preservar la intención arquitectónica y reducir la desviación mientras el agente construye software.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Qué problema resuelve CDAD?</h3>
+                <p style="margin-bottom: 20px;">
+                    CDAD aborda la desviación arquitectónica: cuando un agente de IA hace cambios individualmente razonables que colectivamente alejan un sistema de su diseño previsto. También resuelve pérdida de contexto, cambios incontrolados y decisiones inconsistentes entre sesiones de desarrollo de IA.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Es CDAD un reemplazo para SDD?</h3>
+                <p style="margin-bottom: 20px;">
+                    No. CDAD complementa SDD (Spec-Driven Development). SDD define QUÉ construir; CDAD gobierna CÓMO un agente de IA debe operar mientras lo construye. Funcionan juntos efectivamente en el mismo proyecto.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Es CDAD un agente de IA de codificación?</h3>
+                <p style="margin-bottom: 20px;">
+                    No. CDAD es una metodología y un enfoque de gobernanza. No es un sistema de IA en sí. CDAD está diseñado para funcionar CON diferentes agentes de IA de codificación (Claude Code, Kiro, Cursor, etc.).
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Qué es el Context Protection Pattern (CPP)?</h3>
+                <p style="margin-bottom: 20px;">
+                    CPP es un patrón central de CDAD que protege el contexto crítico del proyecto de ser libremente modificado por un agente de IA. En lugar de modificación libre, el agente debe proponer cambios a través de un flujo de trabajo controlado con revisión humana.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Depende CDAD de un proveedor específico de IA?</h3>
+                <p style="margin-bottom: 20px;">
+                    No. CDAD es independiente de proveedores y está diseñado para ser portable entre diferentes agentes de IA de codificación y entornos de desarrollo. La metodología en sí no está vinculada a ningún agente específico.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Puede CDAD funcionar con diferentes agentes de IA de codificación?</h3>
+                <p style="margin-bottom: 20px;">
+                    Sí. La implementación de referencia actual documenta integraciones con Claude Code, Kiro y Cursor. CDAD puede adaptarse para funcionar con otros agentes de IA de codificación y herramientas de desarrollo.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Por dónde comienzo con CDAD?</h3>
+                <p style="margin-bottom: 20px;">
+                    Comienza con el proyecto oficial CDAD Bootstrap en https://github.com/CDAD-Community/cdad-bootstrap. Clónalo, comprende la estructura de contexto gobernado, luego adapta el framework y reglas de gobernanza a tu proyecto y necesidades específicas.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Es CDAD código abierto?</h3>
+                <p style="margin-bottom: 20px;">
+                    Sí. CDAD es una metodología de código abierto. La implementación de referencia bootstrap está disponible en GitHub bajo una licencia Creative Commons Attribution 4.0.
+                </p>
+
+                <h3 style="color: #60a5fa; margin-top: 40px; margin-bottom: 15px;">¿Quién creó CDAD?</h3>
+                <p style="margin-bottom: 20px;">
+                    CDAD fue creado por Moisés Griott y ahora es mantenido por CDAD Community como un proyecto de código abierto.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Código Abierto • Desarrollo de Software Asistido por IA • SDD • Context Engineering • Agentes de IA</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

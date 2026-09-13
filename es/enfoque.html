@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Enfoque CDAD</title>
+    <meta name="description" content="Descubre cómo CDAD aborda el desarrollo asistido por IA a través de contexto gobernado, arquitectura y patrones de protección.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/es/enfoque">
+    <meta property="og:title" content="El Enfoque CDAD">
+    <meta property="og:description" content="Cómo CDAD gobierna el desarrollo de software asistido por IA a través del contexto explícito y los límites.">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/es/enfoque">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/approach">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/enfoque">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/approach">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/es/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/es/">Inicio</a>
+            <a href="/cdad-site/es/acerca">Acerca</a>
+            <a href="/cdad-site/es/problema">Problema</a>
+            <a href="/cdad-site/es/enfoque">Enfoque</a>
+            <a href="/cdad-site/es/ecosistema">Ecosistema</a>
+            <a href="/cdad-site/es/metodologia">Metodología</a>
+            <a href="/cdad-site/es/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/es/preguntas-frecuentes">Preguntas</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1><span>El Enfoque CDAD</span></h1>
+        <h2>Contexto Gobernado para Desarrollo Asistido por IA</h2>
+        <p class="hero-description">
+            El contexto se convierte en una parte explícita y gobernada del desarrollo de software. Hacer que la arquitectura, decisiones y restricciones sean explícitas protege la intención de ingeniería.
+        </p>
+    </div>
+</header>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>La Idea Central</h2>
+            <p>
+                CDAD no intenta hacer que los agentes de IA sean más inteligentes. En su lugar, hace que el entorno de desarrollo sea más confiable al establecer contexto gobernado que el agente debe respetar.
+            </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; color: #8fa4ba; line-height: 1.8; font-size: 16px;">
+            <p style="margin-bottom: 20px;">
+                La base es simple: <strong>el contexto es un activo de ingeniería</strong>. Así como controlas la versión del código fuente, deberías controlar la versión y proteger el contexto que guía a los agentes de IA.
+            </p>
+
+            <p style="margin-bottom: 20px;">
+                En lugar de:
+            </p>
+            <ul style="margin: 20px 0 20px 30px; color: #8fa4ba;">
+                <li>"Esperar que el agente entienda la arquitectura"</li>
+                <li>"Escribir indicaciones detalladas cada vez"</li>
+                <li>"Revisar y corregir la salida del agente"</li>
+            </ul>
+
+            <p style="margin-bottom: 20px;">
+                CDAD establece:
+            </p>
+            <ul style="margin: 20px 0 20px 30px; color: #8fa4ba;">
+                <li>Contexto explícito y gobernado que persiste entre sesiones</li>
+                <li>Reglas y límites claros que son revisables y versionados</li>
+                <li>Contexto protegido que el agente no puede eludir</li>
+                <li>Validación determinística que detecta desviación automáticamente</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>El Flujo de Cinco Pasos</h2>
+            <p>
+                Cómo CDAD estructura el proceso de desarrollo.
+            </p>
+        </div>
+
+        <div class="flow">
+            <div class="flow-item">
+                <div class="flow-number">1</div>
+                <h3>Especificación</h3>
+                <p>Define requisitos y comportamiento esperado (SDD)</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">2</div>
+                <h3>Contexto Gobernado</h3>
+                <p>Establece arquitectura, reglas y restricciones explícitamente</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">3</div>
+                <h3>Gobernanza</h3>
+                <p>Protege el contexto y establece límites claros del agente</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">4</div>
+                <h3>Agente de IA</h3>
+                <p>Ejecuta tareas de desarrollo dentro de límites gobernados</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">5</div>
+                <h3>Software Validado</h3>
+                <p>Verifica salida y detecta desviación arquitectónica</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Principios Clave</h2>
+            <p>
+                Los principios que guían CDAD.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>El Contexto es Explícito</h3>
+                <p>
+                    La arquitectura, decisiones, reglas y restricciones se escriben y se versionan. Nada existe solo en conversación o conocimiento tribal.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>El Contexto es Protegido</h3>
+                <p>
+                    El contexto crítico no puede ser modificado libremente por un agente. Los cambios siguen un proceso gobernado con revisión humana.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>El Contexto es Trazable</h3>
+                <p>
+                    Todos los cambios son revisables a través del historial de Git. Puedes ver qué cambió, quién lo cambió, por qué y cuándo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>La Gobernanza es Determinística</h3>
+                <p>
+                    Cuando es posible, la gobernanza se aplica a través del código (puertas CI, hooks, scripts de validación) no solo instrucciones.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Los Límites son Claros</h3>
+                <p>
+                    El agente sabe qué puede modificar, qué requiere revisión y qué no puede cambiar. Sin ambigüedad.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>La Desviación es Detectable</h3>
+                <p>
+                    Los cambios que se desvían de la arquitectura se detectan automáticamente a través de validación y procesos de revisión.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>No Se Trata de Hacer IA Más Inteligente</h2>
+            <p>
+                CDAD no intenta mejorar el modelo de IA en sí. Mejora el entorno en el que opera el agente.
+            </p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <div class="architecture">
+                <div class="architecture-line architecture-highlight">Enfoque Tradicional</div>
+                <div class="architecture-line">Mejores indicaciones → Respuestas más inteligentes</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;(Aún dependiente del contexto)</div>
+                <div class="architecture-line"></div>
+                <div class="architecture-line architecture-highlight">Enfoque CDAD</div>
+                <div class="architecture-line">Contexto Gobernado + Límites Claros</div>
+                <div class="architecture-line">→ Entorno de Desarrollo Confiable</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;(El contexto está protegido)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Próximos Pasos</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3><a href="/cdad-site/es/problema" style="color: #60a5fa;">Comprende el Problema</a></h3>
+                <p>Aprende sobre los desafíos que los agentes de IA crean.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/es/ecosistema" style="color: #60a5fa;">CDAD en Contexto</a></h3>
+                <p>Ve cómo CDAD complementa SDD, RAG y otros enfoques.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/es/metodologia" style="color: #60a5fa;">Profundización</a></h3>
+                <p>Explora la metodología CDAD y conceptos clave en detalle.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/es/cdad-2-1" style="color: #60a5fa;">Comienza</a></h3>
+                <p>Aprende sobre CDAD 2.1 y la implementación bootstrap.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Código Abierto • Desarrollo de Software Asistido por IA • SDD • Context Engineering • Agentes de IA</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

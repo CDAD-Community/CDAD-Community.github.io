@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Problem — CDAD</title>
+    <meta name="description" content="Understand the challenges AI agents face: context loss, architectural drift, uncontrolled changes, and inconsistent decisions.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/en/problem">
+    <meta property="og:title" content="The Problem - CDAD">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/en/problem">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/problem">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/problema">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/problem">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/en/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/en/">Home</a>
+            <a href="/cdad-site/en/about">About</a>
+            <a href="/cdad-site/en/problem">Problem</a>
+            <a href="/cdad-site/en/approach">Approach</a>
+            <a href="/cdad-site/en/ecosystem">Ecosystem</a>
+            <a href="/cdad-site/en/methodology">Methodology</a>
+            <a href="/cdad-site/en/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/en/faq">FAQ</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1><span>The Problem</span></h1>
+        <h2>Architectural Drift</h2>
+        <p class="hero-description">
+            Understanding why context and governance matter when AI agents participate in software development.
+        </p>
+    </div>
+</header>
+
+<section class="problem">
+    <div class="container">
+        <div class="section-header">
+            <h2>AI Agents Are Powerful But Context-Dependent</h2>
+            <p>
+                AI coding agents can implement complete features rapidly. But software development requires more than generating code.
+            </p>
+        </div>
+
+        <div class="problem-grid">
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Context Loss</h3>
+                <p>
+                    Agents can lose important architectural, business and technical context during development sessions, leading to decisions that ignore project constraints.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚠️</div>
+                <h3>Uncontrolled Changes</h3>
+                <p>
+                    Without explicit boundaries, an agent may modify critical infrastructure, configuration files, or architectural components it should not touch.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔄</div>
+                <h3>Inconsistent Decisions</h3>
+                <p>
+                    Different prompts and sessions produce different implementations of the same feature or pattern, breaking architectural consistency.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Architectural Drift</h3>
+                <p>
+                    Individually reasonable AI-generated changes gradually move a system away from its intended design without anyone noticing until it's too late.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📉</div>
+                <h3>Governance Gap</h3>
+                <p>
+                    Traditional development doesn't have mechanisms to govern AI agent behavior. There are no explicit rules, responsibilities or controlled context.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">❌</div>
+                <h3>No Session Continuity</h3>
+                <p>
+                    Context established in one session can be lost when the agent is invoked again, requiring humans to re-explain the same constraints repeatedly.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Deep Problem</h2>
+            <p>
+                The fundamental issue is not that agents generate incorrect code.
+            </p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <div class="architecture">
+                <div class="architecture-line architecture-highlight">
+                    The Deeper Problem
+                </div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">
+                    Agents operate on context
+                </div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">
+                    Context can be...
+                </div>
+                <div class="architecture-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;├── incomplete
+                </div>
+                <div class="architecture-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;├── inconsistent
+                </div>
+                <div class="architecture-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;├── stale
+                </div>
+                <div class="architecture-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;├── ambiguous
+                </div>
+                <div class="architecture-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;└── uncontrolled
+                </div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line architecture-highlight">
+                    Unpredictable behavior
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Traditional Approaches Fall Short</h2>
+            <p>
+                Reviewing agent output after it's generated is reactive and doesn't address the root cause.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Code Review Alone</h3>
+                <p>
+                    Reviewing the output doesn't help the agent make better decisions next time. The context governance problem persists.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Better Prompts</h3>
+                <p>
+                    More detailed prompts help temporarily, but they're not persistent, reviewable, or governance mechanisms.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Trust in the Agent</h3>
+                <p>
+                    Trusting the agent to "follow the architecture" doesn't work when the architecture isn't explicitly governed and protected.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Manual Oversight</h3>
+                <p>
+                    Humans manually reviewing every change doesn't scale and misses the real issue: lack of governed context.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Solution</h2>
+            <p>Make context explicit, governed and protected.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; color: #8fa4ba; line-height: 1.8; font-size: 16px;">
+            <p>
+                <strong>CDAD</strong> addresses this by treating context as an engineering asset that can be structured, governed, protected and validated.
+            </p>
+            <p style="margin-top: 20px;">
+                Instead of trying to make agents "smarter", CDAD makes the development environment more reliable by establishing explicit rules, protecting critical context, and detecting drift.
+            </p>
+            <p style="margin-top: 20px;">
+                <a href="/cdad-site/en/approach" style="color: #60a5fa;">Learn about the CDAD Approach →</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Open Source • AI-Assisted Software Development • SDD • Context Engineering • AI Coding Agents</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

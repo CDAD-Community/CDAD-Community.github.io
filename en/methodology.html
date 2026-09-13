@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAD Methodology</title>
+    <meta name="description" content="Deep dive into CDAD concepts: governance layers, freeze, change requests, ADRs and architectural intent preservation.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/en/methodology">
+    <meta property="og:title" content="CDAD Methodology">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/en/methodology">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/methodology">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/metodologia">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/en/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/en/">Home</a>
+            <a href="/cdad-site/en/about">About</a>
+            <a href="/cdad-site/en/problem">Problem</a>
+            <a href="/cdad-site/en/approach">Approach</a>
+            <a href="/cdad-site/en/ecosystem">Ecosystem</a>
+            <a href="/cdad-site/en/methodology">Methodology</a>
+            <a href="/cdad-site/en/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/en/faq">FAQ</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1><span>CDAD Methodology</span></h1>
+        <h2>Principles, Concepts and Practices</h2>
+        <p class="hero-description">
+            Understanding the core concepts that make CDAD work: governed context, context layers, freeze, change requests, and architectural intent preservation.
+        </p>
+    </div>
+</header>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Context Layers (L0-L3)</h2>
+            <p>
+                CDAD organizes project information into governance layers with different authority and edit policies.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card" style="background: rgba(255,0,0,.05); border: 1px solid rgba(255,0,0,.15);">
+                <h3>L0: Governed Context</h3>
+                <p>
+                    <strong>Contents:</strong> Architecture, principles, constraints, solution vision, glossary<br>
+                    <strong>Policy:</strong> Protected / Propose only<br>
+                    <strong>Authority:</strong> Human review required
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(255,165,0,.05); border: 1px solid rgba(255,165,0,.15);">
+                <h3>L1: Decisions</h3>
+                <p>
+                    <strong>Contents:</strong> ADRs (Architecture Decision Records)<br>
+                    <strong>Policy:</strong> Propose with review<br>
+                    <strong>Authority:</strong> Deliberate change process
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(0,255,0,.05); border: 1px solid rgba(0,255,0,.15);">
+                <h3>L2: Documentation</h3>
+                <p>
+                    <strong>Contents:</strong> Human-facing guides and references<br>
+                    <strong>Policy:</strong> Editable with review<br>
+                    <strong>Authority:</strong> Flexible updates
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(0,150,255,.05); border: 1px solid rgba(0,150,255,.15);">
+                <h3>L3: Implementation</h3>
+                <p>
+                    <strong>Contents:</strong> Source code, tests, infrastructure<br>
+                    <strong>Policy:</strong> Normal development<br>
+                    <strong>Authority:</strong> Standard review process
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Freeze: Ratification & Authority</h2>
+            <p>
+                Freeze establishes the authoritative baseline for implementation.
+            </p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <div class="architecture">
+                <div class="architecture-line architecture-highlight">THINK</div>
+                <div class="architecture-line">(Explore, design, dialogue)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">Context / Decisions</div>
+                <div class="architecture-line">(Made explicit)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">Human Ratification</div>
+                <div class="architecture-line">(Approval & authority)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line architecture-highlight">FREEZE</div>
+                <div class="architecture-line">(Authoritative baseline)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">WORK</div>
+                <div class="architecture-line">(Guided by frozen context)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Change Requests & Impact Analysis</h2>
+            <p>
+                Changes after freeze follow a governed process, not bypass governance.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Discovery</h3>
+                <p>
+                    During work, new requirements, constraints or contradictions are discovered.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Change Request</h3>
+                <p>
+                    The change is documented with rationale, not just implemented ad-hoc.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Impact Analysis</h3>
+                <p>
+                    Analyze what changes to architecture, context, and decisions would be needed.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>THINK & Decide</h3>
+                <p>
+                    Re-enter THINK mode, make decisions, then re-freeze with updated context.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Core Principles</h2>
+            <p>
+                Principles that guide CDAD practice.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Context is Explicit</h3>
+                <p>
+                    Architecture and constraints exist in written form, versioned in Git. Not in prompts, conversations or assumptions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Governance is Deterministic</h3>
+                <p>
+                    Where possible, governance is enforced through code (CI gates, hooks, scripts) not just instructions to the agent.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Human Decision Boundary</h3>
+                <p>
+                    Agents propose and analyze. Humans decide. Freeze marks the decision point and establishes authority.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Architectural Intent is Protected</h3>
+                <p>
+                    Critical decisions are protected from unintended modification through governance layers and review processes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Learn More</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3><a href="/cdad-site/en/cdad-2-1" style="color: #60a5fa;">CDAD 2.1</a></h3>
+                <p>How these concepts are implemented in the reference bootstrap.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/en/approach" style="color: #60a5fa;">The Approach</a></h3>
+                <p>How CDAD makes development more reliable.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/en/faq" style="color: #60a5fa;">FAQ</a></h3>
+                <p>Common questions about CDAD methodology.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/CDAD-Community/cdad-bootstrap" style="color: #60a5fa;" target="_blank">Bootstrap</a></h3>
+                <p>Reference implementation with working examples.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Open Source • AI-Assisted Software Development • SDD • Context Engineering • AI Coding Agents</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología CDAD</title>
+    <meta name="description" content="Profundiza en los conceptos de CDAD: capas de gobernanza, freeze, solicitudes de cambio, ADRs e intención arquitectónica.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/es/metodologia">
+    <meta property="og:title" content="Metodología CDAD">
+    <meta property="og:url" content="https://mgriott.github.io/cdad-site/es/metodologia">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/methodology">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/metodologia">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/es/" class="nav-logo"><span>CDAD</span></a>
+        <div class="nav-links">
+            <a href="/cdad-site/es/">Inicio</a>
+            <a href="/cdad-site/es/acerca">Acerca</a>
+            <a href="/cdad-site/es/problema">Problema</a>
+            <a href="/cdad-site/es/enfoque">Enfoque</a>
+            <a href="/cdad-site/es/ecosistema">Ecosistema</a>
+            <a href="/cdad-site/es/metodologia">Metodología</a>
+            <a href="/cdad-site/es/cdad-2-1">CDAD 2.1</a>
+            <a href="/cdad-site/es/preguntas-frecuentes">Preguntas</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1><span>Metodología CDAD</span></h1>
+        <h2>Principios, Conceptos y Prácticas</h2>
+        <p class="hero-description">
+            Comprendiendo los conceptos clave que hacen funcionar a CDAD: contexto gobernado, capas de contexto, freeze, solicitudes de cambio e intención arquitectónica.
+        </p>
+    </div>
+</header>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Capas de Contexto (L0-L3)</h2>
+            <p>
+                CDAD organiza la información del proyecto en capas de gobernanza con diferente autoridad y políticas de edición.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card" style="background: rgba(255,0,0,.05); border: 1px solid rgba(255,0,0,.15);">
+                <h3>L0: Contexto Gobernado</h3>
+                <p>
+                    <strong>Contenido:</strong> Arquitectura, principios, restricciones, visión de solución, glosario<br>
+                    <strong>Política:</strong> Protegido / Solo propuestas<br>
+                    <strong>Autoridad:</strong> Revisión humana requerida
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(255,165,0,.05); border: 1px solid rgba(255,165,0,.15);">
+                <h3>L1: Decisiones</h3>
+                <p>
+                    <strong>Contenido:</strong> ADRs (Registros de Decisiones Arquitectónicas)<br>
+                    <strong>Política:</strong> Proponer con revisión<br>
+                    <strong>Autoridad:</strong> Proceso de cambio deliberado
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(0,255,0,.05); border: 1px solid rgba(0,255,0,.15);">
+                <h3>L2: Documentación</h3>
+                <p>
+                    <strong>Contenido:</strong> Guías y referencias orientadas a humanos<br>
+                    <strong>Política:</strong> Editable con revisión<br>
+                    <strong>Autoridad:</strong> Actualizaciones flexibles
+                </p>
+            </div>
+
+            <div class="card" style="background: rgba(0,150,255,.05); border: 1px solid rgba(0,150,255,.15);">
+                <h3>L3: Implementación</h3>
+                <p>
+                    <strong>Contenido:</strong> Código fuente, pruebas, infraestructura<br>
+                    <strong>Política:</strong> Desarrollo normal<br>
+                    <strong>Autoridad:</strong> Proceso de revisión estándar
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Freeze: Ratificación & Autoridad</h2>
+            <p>
+                Freeze establece la línea de base autoritativa para la implementación.
+            </p>
+        </div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <div class="architecture">
+                <div class="architecture-line architecture-highlight">THINK</div>
+                <div class="architecture-line">(Explorar, diseñar, dialogar)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">Contexto / Decisiones</div>
+                <div class="architecture-line">(Hechas explícitas)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">Ratificación Humana</div>
+                <div class="architecture-line">(Aprobación & autoridad)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line architecture-highlight">FREEZE</div>
+                <div class="architecture-line">(Línea de base autoritativa)</div>
+                <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+                <div class="architecture-line">TRABAJO</div>
+                <div class="architecture-line">(Guiado por contexto congelado)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Solicitudes de Cambio & Análisis de Impacto</h2>
+            <p>
+                Los cambios después del freeze siguen un proceso gobernado, no eludir la gobernanza.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Descubrimiento</h3>
+                <p>
+                    Durante el trabajo, se descubren nuevos requisitos, restricciones o contradicciones.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Solicitud de Cambio</h3>
+                <p>
+                    El cambio se documenta con fundamentación, no solo se implementa sin pensar.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Análisis de Impacto</h3>
+                <p>
+                    Analiza qué cambios en arquitectura, contexto y decisiones serían necesarios.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>THINK & Decidir</h3>
+                <p>
+                    Re-entra en modo THINK, toma decisiones, luego re-congela con contexto actualizado.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px; background: #0a1626;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Principios Clave</h2>
+            <p>
+                Principios que guían la práctica de CDAD.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>El Contexto es Explícito</h3>
+                <p>
+                    La arquitectura y restricciones existen en forma escrita, versionadas en Git. No en indicaciones, conversaciones o suposiciones.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>La Gobernanza es Determinística</h3>
+                <p>
+                    Cuando es posible, la gobernanza se aplica a través del código (puertas CI, hooks, scripts) no solo instrucciones al agente.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Límite de Decisión Humana</h3>
+                <p>
+                    Los agentes proponen y analizan. Los humanos deciden. Freeze marca el punto de decisión y establece autoridad.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>La Intención Arquitectónica es Protegida</h3>
+                <p>
+                    Las decisiones críticas están protegidas de modificación involuntaria a través de capas de gobernanza y procesos de revisión.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 20px;">
+    <div class="container">
+        <div class="section-header">
+            <h2>Aprende Más</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3><a href="/cdad-site/es/cdad-2-1" style="color: #60a5fa;">CDAD 2.1</a></h3>
+                <p>Cómo estos conceptos se implementan en el bootstrap de referencia.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/es/enfoque" style="color: #60a5fa;">El Enfoque</a></h3>
+                <p>Cómo CDAD hace que el desarrollo sea más confiable.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="/cdad-site/es/preguntas-frecuentes" style="color: #60a5fa;">Preguntas Frecuentes</a></h3>
+                <p>Preguntas comunes sobre la metodología CDAD.</p>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/CDAD-Community/cdad-bootstrap" style="color: #60a5fa;" target="_blank">Bootstrap</a></h3>
+                <p>Implementación de referencia con ejemplos funcionales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Código Abierto • Desarrollo de Software Asistido por IA • SDD • Context Engineering • Agentes de IA</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>
