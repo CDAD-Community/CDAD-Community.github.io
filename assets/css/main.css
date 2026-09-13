@@ -45,6 +45,7 @@ nav {
     max-height: 50px;
     height: auto;
     object-fit: contain;
+    display: block;
 }
 
 .nav-links {
