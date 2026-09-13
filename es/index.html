@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CDAD — Context-Driven AI Development</title>
+
+    <meta name="description"
+          content="CDAD (Context-Driven AI Development) es una metodología de código abierto para desarrollo de software asistido por IA gobernado, combinando especificaciones, ingeniería de contexto, reglas y patrones de protección.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords"
+          content="CDAD, Context-Driven AI Development, SDD, Spec-Driven Development, ingeniería de contexto, agentes de IA, gobernanza de contexto, Context Protection Pattern">
+
+    <meta name="author" content="Moisés Griott">
+
+    <link rel="canonical"
+          href="https://mgriott.github.io/cdad-site/es/">
+
+    <meta property="og:title"
+          content="CDAD — Context-Driven AI Development">
+
+    <meta property="og:description"
+          content="Un enfoque de gobernanza para desarrollo de software asistido por IA con agentes de IA.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://mgriott.github.io/cdad-site/es/">
+
+    <meta property="og:image"
+          content="https://mgriott.github.io/cdad-site/assets/images/cdad.png">
+
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CDAD — Context-Driven AI Development">
+    <meta name="twitter:description"
+          content="Un enfoque gobernado para construir software con agentes de IA.">
+
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/">
+
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "CDAD — Context-Driven AI Development",
+      "description": "CDAD es una metodología de código abierto para desarrollo de software asistido por IA gobernado.",
+      "author": {
+        "@type": "Person",
+        "name": "Moisés Griott"
+      },
+      "url": "https://mgriott.github.io/cdad-site/es/",
+      "inLanguage": "es",
+      "keywords": [
+        "CDAD",
+        "Context-Driven AI Development",
+        "desarrollo asistido por IA",
+        "gobernanza de agentes de IA",
+        "gobernanza de contexto"
+      ],
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "CDAD Community",
+        "url": "https://mgriott.github.io/cdad-site/"
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/es/" class="nav-logo">
+            <span>CDAD</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="/cdad-site/es/">Inicio</a>
+            <a href="/cdad-site/es/#problem">Problema</a>
+            <a href="/cdad-site/es/#approach">Enfoque</a>
+            <a href="/cdad-site/es/#ecosystem">Ecosistema</a>
+            <a href="/cdad-site/es/#cpp">CPP</a>
+            <a href="/cdad-site/es/#agents">Agentes</a>
+            <a href="/cdad-site/es/#sdd">SDD</a>
+            <a href="/cdad-site/es/#faq">Preguntas</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap"
+               class="nav-github" target="_blank" rel="noopener">
+                GitHub
+            </a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="badge">Código Abierto • Desarrollo con IA</div>
+
+        <h1><span>CDAD</span></h1>
+
+        <h2>Context-Driven AI Development</h2>
+
+        <p class="hero-description">
+            Una metodología de código abierto para desarrollo de software asistido por IA gobernado —
+            combinando especificaciones, contexto gobernado, arquitectura, reglas y
+            patrones de protección para preservar la intención de ingeniería y reducir la desviación arquitectónica.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap"
+               target="_blank" rel="noopener"
+               class="button button-primary">
+                Comenzar con Bootstrap
+            </a>
+            <a href="/cdad-site/es/#problem"
+               class="button button-secondary">
+                Más Información
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="problem" class="problem">
+    <div class="container">
+        <div class="section-header">
+            <h2>El Problema: Desviación Arquitectónica</h2>
+            <p>
+                Los agentes de IA de codificación son poderosos, pero el desarrollo de software
+                requiere más que solo generar código.
+            </p>
+        </div>
+
+        <div class="problem-grid">
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>Pérdida de Contexto</h3>
+                <p>
+                    Los agentes de IA pueden perder contexto importante arquitectónico,
+                    empresarial y técnico durante las sesiones de desarrollo.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚠️</div>
+                <h3>Cambios Incontrolados</h3>
+                <p>
+                    Sin límites explícitos, un agente puede modificar partes del
+                    sistema que no debería tocar.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔄</div>
+                <h3>Decisiones Inconsistentes</h3>
+                <p>
+                    Diferentes indicaciones y sesiones pueden producir diferentes
+                    implementaciones de la misma intención arquitectónica.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Brecha de Gobernanza</h3>
+                <p>
+                    El desarrollo asistido por IA necesita reglas explícitas,
+                    responsabilidades y contexto controlado.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="approach">
+    <div class="container">
+        <div class="section-header">
+            <h2>El Enfoque CDAD</h2>
+            <p>
+                El contexto se convierte en una parte explícita y gobernada del desarrollo de software.
+            </p>
+        </div>
+
+        <div class="flow">
+            <div class="flow-item">
+                <div class="flow-number">1</div>
+                <h3>Especificación</h3>
+                <p>Define qué debe hacer el sistema.</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">2</div>
+                <h3>Contexto Gobernado</h3>
+                <p>Proporciona conocimiento explícito del proyecto.</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">3</div>
+                <h3>Arquitectura</h3>
+                <p>Define reglas y límites.</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">4</div>
+                <h3>Agente de IA</h3>
+                <p>Ejecuta tareas de desarrollo.</p>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-number">5</div>
+                <h3>Software Validado</h3>
+                <p>Produce cambios de calidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ecosystem" class="ecosystem">
+    <div class="container">
+        <div class="section-header">
+            <h2>CDAD y el Ecosistema de Desarrollo de IA</h2>
+            <p>
+                CDAD complementa SDD, Context Engineering y prácticas modernas
+                de ingeniería de software asistida por IA.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>Spec-Driven Development</h3>
+                <p>
+                    SDD define el comportamiento del software y los requisitos a través de
+                    especificaciones explícitas antes y durante la implementación asistida por IA.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Context Engineering</h3>
+                <p>
+                    CDAD trata el contexto del proyecto como un artefacto de ingeniería
+                    explícito que puede ser estructurado, gobernado y protegido.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Agentes de IA de Codificación</h3>
+                <p>
+                    CDAD proporciona una capa de gobernanza para Claude Code, Kiro, Cursor,
+                    Copilot y otras herramientas de desarrollo agentic.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Desarrollo Asistido por IA</h3>
+                <p>
+                    Combina decisiones arquitectónicas humanas con implementación asistida por IA
+                    mientras preservas la intención del proyecto y las restricciones de ingeniería.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cpp">
+    <div class="container">
+        <div class="section-header">
+            <h2>Context Protection Pattern</h2>
+            <p>
+                CDAD introduce protección explícita alrededor del contexto
+                que gobierna el agente.
+            </p>
+        </div>
+
+        <div class="architecture">
+            <div class="architecture-line">Agente de IA de Codificación</div>
+            <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+            <div class="architecture-line architecture-highlight">
+                Contexto Gobernado
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Contexto del Proyecto
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Decisiones Arquitectónicas
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;├── Reglas y Restricciones
+            </div>
+            <div class="architecture-line">
+                &nbsp;&nbsp;&nbsp;&nbsp;└── Activos Protegidos
+            </div>
+            <div class="architecture-line">&nbsp;&nbsp;&nbsp;&nbsp;↓</div>
+            <div class="architecture-line architecture-highlight">
+                Implementación Controlada
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="when">
+    <div class="container">
+        <div class="section-header">
+            <h2>¿Cuándo Deberías Usar CDAD?</h2>
+            <p>
+                CDAD es particularmente útil cuando los agentes de IA participan activamente
+                en la implementación y la coherencia arquitectónica es importante.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <div class="icon">🏢</div>
+                <h3>Sistemas Existentes</h3>
+                <p>
+                    Cuando los agentes deben trabajar de manera segura dentro de una arquitectura
+                    existente con convenciones y dependencias establecidas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>Agentes de IA de Codificación</h3>
+                <p>
+                    Cuando Claude Code, Kiro, Cursor, Copilot u otros agentes de desarrollo
+                    de IA se convierten en parte del flujo de trabajo de ingeniería.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧭</div>
+                <h3>Gobernanza de Arquitectura</h3>
+                <p>
+                    Cuando las decisiones arquitectónicas deben permanecer explícitas,
+                    revisables y protegidas de cambios involuntarios del agente.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔁</div>
+                <h3>Proyectos de Larga Vida</h3>
+                <p>
+                    Cuando múltiples sesiones, agentes y desarrolladores necesitan
+                    preservar el mismo conocimiento del proyecto e intención de ingeniería.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sdd">
+    <div class="container">
+        <div class="section-header">
+            <h2>CDAD y SDD</h2>
+            <p>
+                CDAD complementa Spec-Driven Development (SDD) agregando un modelo de gobernanza
+                para el contexto, arquitectura y reglas consumidas por agentes de IA de codificación.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>SDD define qué construir</h3>
+                <p>
+                    Specification-Driven Development hace que los requisitos, el comportamiento esperado
+                    y la intención de implementación sean explícitos y revisables.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CDAD gobierna cómo trabajan los agentes</h3>
+                <p>
+                    CDAD trata el contexto del proyecto, las decisiones arquitectónicas,
+                    restricciones y reglas del agente como activos de ingeniería gobernados.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cómo se complementan</h3>
+                <p>
+                    SDD puede definir qué debe construirse; CDAD gobierna el contexto y
+                    los límites que guían a un agente de IA mientras lo construye.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>No es un reemplazo</h3>
+                <p>
+                    CDAD no reemplaza SDD. Los dos enfoques funcionan juntos en
+                    el desarrollo moderno de software asistido por IA.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="agents" class="agents">
+    <div class="container">
+        <div class="section-header">
+            <h2>Diseñado para Agentes de IA de Codificación</h2>
+            <p>
+                CDAD es un enfoque, no un reemplazo para tu agente de desarrollo
+                preferido.
+            </p>
+        </div>
+
+        <div class="agent-list">
+            <div class="agent">Claude Code</div>
+            <div class="agent">Kiro</div>
+            <div class="agent">Cursor</div>
+            <div class="agent">GitHub Copilot</div>
+            <div class="agent">Qwen Code</div>
+            <div class="agent">Otros Agentes de IA</div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="ecosystem">
+    <div class="container">
+        <div class="section-header">
+            <h2>Preguntas Frecuentes</h2>
+            <p>
+                Preguntas comunes sobre CDAD, sus conceptos y cómo comenzar.
+            </p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="card">
+                <h3>¿Qué es CDAD?</h3>
+                <p>
+                    CDAD (Context-Driven AI Development) es una metodología de código abierto
+                    para desarrollo de software asistido por IA gobernado que combina especificaciones,
+                    ingeniería de contexto, gobernanza y patrones de protección.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>¿Es CDAD un reemplazo para SDD?</h3>
+                <p>
+                    No. CDAD complementa SDD. SDD se enfoca en especificaciones explícitas;
+                    CDAD se enfoca en gobernar el contexto, la arquitectura, las reglas y
+                    los límites utilizados por el desarrollo asistido por IA.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>¿Es CDAD un agente de IA de codificación?</h3>
+                <p>
+                    No. CDAD es una metodología y un enfoque de gobernanza que puede ser
+                    aplicado alrededor de diferentes agentes de IA de codificación y herramientas de desarrollo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>¿Qué es el Context Protection Pattern?</h3>
+                <p>
+                    CPP es un patrón CDAD para proteger el contexto gobernado del proyecto
+                    y hacer que los cambios al conocimiento de ingeniería crítica sean deliberados y revisables.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>¿Qué es la desviación arquitectónica?</h3>
+                <p>
+                    Cambios generados por IA individualmente razonables que gradualmente alejan
+                    un sistema de su diseño previsto. CDAD ayuda a prevenirlo.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>¿Por dónde comienzo?</h3>
+                <p>
+                    Comienza con el proyecto CDAD Bootstrap de código abierto. Clónalo,
+                    comprende la estructura de contexto gobernado, luego adapta las reglas
+                    y mecanismos de protección a tu proyecto.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="opensource">
+    <div class="container">
+        <h2>CDAD Community</h2>
+        <p>
+            CDAD es una metodología de código abierto mantenida por CDAD Community.
+            Contribuciones, experimentos, implementaciones y retroalimentación crítica son bienvenidos.
+        </p>
+        <div style="margin-top:32px; color:#8298af; font-size:14px;">
+            <p>
+                Creado por <strong>Moisés Griott</strong> • Mantenido por <strong>CDAD Community</strong>
+            </p>
+            <p style="margin-top: 15px;">
+                Implementación de Referencia: <a href="https://github.com/CDAD-Community/cdad-bootstrap" style="color: #60a5fa;">cdad-bootstrap</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Código Abierto • Desarrollo de Software Asistido por IA • SDD • Context Engineering • Agentes de IA</p>
+</footer>
+
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+
+</body>
+</html>

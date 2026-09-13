@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Root -->
     <url>
         <loc>https://mgriott.github.io/cdad-site/</loc>
+        <lastmod>2026-09-13</lastmod>
+        <priority>1.0</priority>
     </url>
+
+    <!-- English -->
+    <url>
+        <loc>https://mgriott.github.io/cdad-site/en/</loc>
+        <lastmod>2026-09-13</lastmod>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/"/>
+    </url>
+
+    <!-- Spanish -->
+    <url>
+        <loc>https://mgriott.github.io/cdad-site/es/</loc>
+        <lastmod>2026-09-13</lastmod>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/"/>
+    </url>
+
 </urlset>
