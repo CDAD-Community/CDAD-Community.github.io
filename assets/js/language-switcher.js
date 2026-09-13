@@ -1,8 +1,8 @@
 // Language Switcher
 class LanguageSwitcher {
     constructor() {
-        this.currentLang = this.detectLanguage();
         this.supportedLangs = ['en', 'es'];
+        this.currentLang = this.detectLanguage();
         this.init();
     }
 
