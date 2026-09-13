@@ -1,4 +1,4 @@
-// Language Switcher
+// Language Switcher v2
 class LanguageSwitcher {
     supportedLangs = ['en', 'es'];
 
