@@ -511,7 +511,7 @@ CDAD — Context-Driven AI Development
 
 Website:
 
-https://mgriott.github.io/cdad-site/
+https://cdad-community.github.io/
 
 Bootstrap:
 
