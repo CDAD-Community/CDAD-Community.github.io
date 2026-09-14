@@ -1,89 +1,39 @@
 # CDAD — Context-Driven AI Development
 
-## English
+> CDAD (Context-Driven AI Development) is an open-source methodology for governed AI-assisted software development. It treats project context as an explicit engineering artifact, with mechanisms for structuring, governing and protecting the context consumed by AI coding agents.
 
-CDAD (Context-Driven AI Development) is an open-source methodology for governed AI-assisted software development.
+CDAD complements Spec-Driven Development (SDD): SDD makes specifications and expected behavior explicit, while CDAD governs the context and boundaries within which an AI coding agent implements them. Core concepts: Governed Context, Context Engineering, Context Governance, the Context Protection Pattern (CPP), Architectural Intent, Architectural Drift.
 
-CDAD treats project context as an explicit engineering artifact and provides mechanisms for structuring, governing and protecting the context consumed by AI coding agents.
+CDAD is agent-agnostic. It is used alongside AI coding agents such as Claude Code, Kiro, Cursor, Qwen Code, GitHub Copilot and others — it is a governance methodology, not an agent itself.
 
-### Core Concepts
+Created by Moisés Griott. Maintained by CDAD Community. Status: open-source project under active development. License: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/.
 
-- Context-Driven AI Development
-- Governed Context
-- Context Engineering
-- AI Coding Agents
-- AI-Assisted Software Development
-- Spec-Driven Development (SDD)
-- Context Governance
-- Context Protection Pattern (CPP)
-- Architectural Intent
-- Architectural Drift
+## Documentation (English)
 
-### Relationship with SDD
+- [About CDAD](https://cdad-community.github.io/en/about): What CDAD is, its core principles, and how it addresses the challenges of AI-assisted software development.
+- [The Problem](https://cdad-community.github.io/en/problem): The challenges AI agents face — context loss, architectural drift, uncontrolled changes, and inconsistent decisions.
+- [The Approach](https://cdad-community.github.io/en/approach): How CDAD governs AI-assisted development through governed context, architecture, and protection patterns.
+- [Ecosystem](https://cdad-community.github.io/en/ecosystem): How CDAD relates to SDD, Context Engineering, AI agents, and modern software development practices.
+- [Methodology](https://cdad-community.github.io/en/methodology): Governance layers, freeze, change requests, ADRs, and architectural intent.
+- [CDAD 2.1 — Current Reference Implementation](https://cdad-community.github.io/en/cdad-2-1): Workspace structure, governed context, and integration examples.
+- [FAQ](https://cdad-community.github.io/en/faq): Common questions about CDAD, its relationship to SDD and RAG, agents, and how to get started.
 
-CDAD complements Spec-Driven Development (SDD). SDD focuses on explicit specifications; CDAD governs the context and boundaries for AI-assisted implementation.
+## Documentación (Español)
 
-### Supported AI Coding Agents
+- [Acerca de CDAD](https://cdad-community.github.io/es/acerca): Qué es CDAD, sus principios fundamentales y cómo aborda los desafíos del desarrollo de software asistido por IA.
+- [El Problema](https://cdad-community.github.io/es/problema): Los desafíos que enfrentan los agentes de IA — pérdida de contexto, desviación arquitectónica, cambios incontrolados y decisiones inconsistentes.
+- [El Enfoque](https://cdad-community.github.io/es/enfoque): Cómo CDAD gobierna el desarrollo asistido por IA a través de contexto gobernado, arquitectura y patrones de protección.
+- [Ecosistema](https://cdad-community.github.io/es/ecosistema): Cómo CDAD se relaciona con SDD, Context Engineering, agentes de IA y prácticas modernas de desarrollo de software.
+- [Metodología](https://cdad-community.github.io/es/metodologia): Capas de gobernanza, freeze, solicitudes de cambio, ADRs e intención arquitectónica.
+- [CDAD 2.1 — Implementación de Referencia Actual](https://cdad-community.github.io/es/cdad-2-1): Estructura de workspace, contexto gobernado y ejemplos de integración.
+- [Preguntas Frecuentes](https://cdad-community.github.io/es/preguntas-frecuentes): Preguntas comunes sobre CDAD, su relación con SDD y RAG, agentes y cómo empezar.
 
-Claude Code, Kiro, Cursor, Qwen Code, GitHub Copilot, and other AI agents.
+## Reference Implementation
 
-### Official Project
+- [cdad-bootstrap](https://github.com/CDAD-Community/cdad-bootstrap): Official open-source starter kit — governed context, architecture mapping, change requests, proposals, ADRs and agent rules.
 
-Repository: https://github.com/CDAD-Community/cdad-bootstrap
-Website: https://cdad-community.github.io/en/
+## Optional
 
----
-
-## Español
-
-CDAD (Context-Driven AI Development) es una metodología de código abierto para desarrollo de software asistido por IA gobernado.
-
-CDAD trata el contexto del proyecto como un artefacto de ingeniería explícito y proporciona mecanismos para estructurar, gobernar y proteger el contexto consumido por agentes de IA de codificación.
-
-### Conceptos Clave
-
-- Context-Driven AI Development
-- Contexto Gobernado
-- Context Engineering
-- Agentes de IA de Codificación
-- Desarrollo de Software Asistido por IA
-- Spec-Driven Development (SDD)
-- Gobernanza de Contexto
-- Context Protection Pattern (CPP)
-- Intención Arquitectónica
-- Desviación Arquitectónica
-
-### Relación con SDD
-
-CDAD complementa Spec-Driven Development (SDD). SDD se enfoca en especificaciones explícitas; CDAD gobierna el contexto y los límites para la implementación asistida por IA.
-
-### Agentes de IA de Codificación Soportados
-
-Claude Code, Kiro, Cursor, Qwen Code, GitHub Copilot y otros agentes de IA.
-
-### Proyecto Oficial
-
-Repositorio: https://github.com/CDAD-Community/cdad-bootstrap
-Sitio web: https://cdad-community.github.io/es/
-
----
-
-## Propósito | Purpose
-
-CDAD aims to improve consistency, control, context preservation and governance when humans and AI agents collaborate to build software.
-
-CDAD tiene como objetivo mejorar la consistencia, control, preservación de contexto y gobernanza cuando humanos y agentes de IA colaboran para construir software.
-
-## Estado | Status
-
-Open-source project under active development.
-Proyecto de código abierto en desarrollo activo.
-
-## Creador | Creator
-
-Moisés Griott
-
-## Licencia | License
-
-Creative Commons Attribution 4.0 International (CC BY 4.0)
-See: https://creativecommons.org/licenses/by/4.0/
+- [Home (English)](https://cdad-community.github.io/en/)
+- [Inicio (Español)](https://cdad-community.github.io/es/)
+- [Sitemap](https://cdad-community.github.io/sitemap.xml): Full list of site URLs with language alternates.
