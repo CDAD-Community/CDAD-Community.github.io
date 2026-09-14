@@ -30,7 +30,7 @@ Claude Code, Kiro, Cursor, Qwen Code, GitHub Copilot, and other AI agents.
 ### Official Project
 
 Repository: https://github.com/CDAD-Community/cdad-bootstrap
-Website: https://mgriott.github.io/cdad-site/en/
+Website: https://cdad-community.github.io/en/
 
 ---
 
@@ -64,7 +64,7 @@ Claude Code, Kiro, Cursor, Qwen Code, GitHub Copilot y otros agentes de IA.
 ### Proyecto Oficial
 
 Repositorio: https://github.com/CDAD-Community/cdad-bootstrap
-Sitio web: https://mgriott.github.io/cdad-site/es/
+Sitio web: https://cdad-community.github.io/es/
 
 ---
 

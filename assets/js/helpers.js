@@ -51,7 +51,7 @@ function generateMetaTags(lang) {
 function getAlternateUrl(lang) {
     const pageKey = getCurrentPageKey();
     const pageConfig = SITE_CONFIG.pages[lang]?.[pageKey];
-    return pageConfig?.canonical || '/cdad-site/en/';
+    return pageConfig?.canonical || '/en/';
 }
 
 function generateNavigation(lang) {
@@ -88,8 +88,8 @@ function generateFooter() {
 }
 
 function generateLanguageScript(lang) {
-    return `<script src="/cdad-site/assets/js/config.js"></script>
-<script src="/cdad-site/assets/js/language-switcher.js"></script>`;
+    return `<script src="/assets/js/config.js"></script>
+<script src="/assets/js/language-switcher.js"></script>`;
 }
 
 // Export for use in pages

@@ -224,17 +224,19 @@ CDAD therefore combines **instructional governance with deterministic controls w
 
 The official open-source starter kit is:
 
-**https://github.com/mgriott/cdad-bootstrap**
+**https://github.com/CDAD-Community/cdad-bootstrap**
 
-The current bootstrap project provides a concrete implementation of the methodology, including governed context, architecture mapping, change requests, proposals, ADRs, agent rules and protection mechanisms. citeturn1view0
+The current bootstrap project provides a concrete implementation of the methodology, including governed context, architecture mapping, change requests, proposals, ADRs, agent rules and protection mechanisms.
 
 The bootstrap currently provides integrations for:
 
 - Claude Code
 - Kiro
 - Codex
+- GitHub Copilot
+- Other AI coding agents
 
-and is designed so the core governance concepts can be adapted to other AI coding agents. citeturn1view0
+and is designed so the core governance concepts can be adapted to other AI coding agents.
 
 ---
 
@@ -255,7 +257,7 @@ It provides a compact representation of the system architecture, including:
 5. Dependency rules
 6. Architecture map change history
 
-The architecture map is maintained as Markdown/Mermaid so it can be reviewed and versioned alongside the code. citeturn1view0
+The architecture map is maintained as Markdown/Mermaid so it can be reviewed and versioned alongside the code.
 
 ---
 
@@ -291,7 +293,7 @@ Architectural change
         └── AI proposes → Human reviews → Architecture changes
 ```
 
-This is one of the mechanisms that turns governance from a recommendation into an operational workflow. citeturn1view0
+This is one of the mechanisms that turns governance from a recommendation into an operational workflow.
 
 ---
 
@@ -357,7 +359,7 @@ CDAD is a **methodology for governing context and engineering intent during AI-a
 The recommended starting point is the official bootstrap repository:
 
 ```bash
-git clone https://github.com/mgriott/cdad-bootstrap.git
+git clone https://github.com/CDAD-Community/cdad-bootstrap.git
 ```
 
 Then:
@@ -371,7 +373,7 @@ Then:
 7. Begin implementing normal development tasks.
 8. Route architectural changes through the governed change process.
 
-The bootstrap repository contains the current detailed setup instructions and portability guidance. citeturn1view0
+The bootstrap repository contains the current detailed setup instructions and portability guidance.
 
 ---
 
@@ -409,7 +411,7 @@ A reference CDAD project can look like:
     └── steering/
 ```
 
-The exact structure is tool- and project-dependent. The official bootstrap repository is the authoritative implementation reference. citeturn1view0
+The exact structure is tool- and project-dependent. The official bootstrap repository is the authoritative implementation reference.
 
 ---
 
@@ -493,7 +495,7 @@ The CDAD Bootstrap project is licensed under:
 
 **Creative Commons Attribution 4.0 International (CC BY 4.0)**
 
-You may share, adapt and build upon the work, including commercially, provided appropriate attribution is given. citeturn1view0
+You may share, adapt and build upon the work, including commercially, provided appropriate attribution is given.
 
 https://creativecommons.org/licenses/by/4.0/
 
@@ -513,4 +515,4 @@ https://mgriott.github.io/cdad-site/
 
 Bootstrap:
 
-https://github.com/mgriott/cdad-bootstrap
+https://github.com/CDAD-Community/cdad-bootstrap
