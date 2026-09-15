@@ -108,7 +108,8 @@ class LanguageSwitcher {
                 '/methodology': '/methodology',
                 '/cdad-2-1': '/cdad-2-1',
                 '/cdad-v3': '/cdad-v3',
-                '/faq': '/faq'
+                '/faq': '/faq',
+                '/quick-user-manual.html': '/quick-user-manual.html'
             },
             'es': {
                 '/': '/es/',
@@ -119,13 +120,22 @@ class LanguageSwitcher {
                 '/metodologia': '/metodologia',
                 '/cdad-2-1': '/cdad-2-1',
                 '/cdad-v3': '/cdad-v3',
-                '/preguntas-frecuentes': '/preguntas-frecuentes'
+                '/preguntas-frecuentes': '/preguntas-frecuentes',
+                '/manual-usuario-rapido.html': '/manual-usuario-rapido.html'
             }
         };
 
         // Remove current language prefix
         let cleanPath = path.replace(/^\/(en|es)/, '');
         if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
+
+        if (currentLang === 'en' && lang === 'es' &&
+            cleanPath === '/quick-user-manual.html') {
+            cleanPath = '/manual-usuario-rapido.html';
+        } else if (currentLang === 'es' && lang === 'en' &&
+                   cleanPath === '/manual-usuario-rapido.html') {
+            cleanPath = '/quick-user-manual.html';
+        }
 
         // Build new path with new language
         if (lang === 'en') {

@@ -28,6 +28,7 @@ const SITE_CONFIG = {
             { label: 'Ecosystem', href: '/en/ecosystem' },
             { label: 'Methodology', href: '/en/methodology' },
             { label: 'CDAD 2.1', href: '/en/cdad-2-1' },
+            { label: 'Quick User Manual', href: '/en/quick-user-manual.html' },
             { label: 'CDAD v3', href: '/en/cdad-v3' },
             { label: 'FAQ', href: '/en/faq' }
         ],
@@ -39,6 +40,7 @@ const SITE_CONFIG = {
             { label: 'Ecosistema', href: '/es/ecosistema' },
             { label: 'Metodología', href: '/es/metodologia' },
             { label: 'CDAD 2.1', href: '/es/cdad-2-1' },
+            { label: 'Manual de Usuario', href: '/es/manual-usuario-rapido.html' },
             { label: 'CDAD v3', href: '/es/cdad-v3' },
             { label: 'Preguntas Frecuentes', href: '/es/preguntas-frecuentes' }
         ]

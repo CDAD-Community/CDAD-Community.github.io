@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick User Manual — CDAD V2.1</title>
+    <meta name="description" content="CDAD V2.1 quick user manual: Bootstrap, confirmations, Freeze, delegation and governed changes.">
+    <link rel="canonical" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html">
+    <link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html">
+    <link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/manual-usuario-rapido.html">
+    <link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html">
+    <link rel="stylesheet" href="/cdad-site/assets/css/main.css">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <a href="/cdad-site/en/" class="nav-logo">
+            <img src="/cdad-site/assets/images/cdad-logo.png" alt="CDAD Logo" class="logo-image">
+        </a>
+        <div class="nav-links">
+            <a href="/cdad-site/en/">Home</a>
+            <a href="/cdad-site/en/#approach">Approach</a>
+            <a href="/cdad-site/en/#ecosystem">Ecosystem</a>
+            <a href="/cdad-site/en/#faq">FAQ</a>
+            <a href="/cdad-site/en/quick-user-manual.html">Manual</a>
+            <a href="https://github.com/CDAD-Community/cdad-bootstrap" class="nav-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </div>
+</nav>
+
+<main class="manual-page">
+    <div class="manual-header">
+        <div class="badge">CDAD V2.1 · Practical guide</div>
+        <h1>Quick User Manual</h1>
+        <p><strong>You define the intent. CDAD protects the intent. AI accelerates implementation.</strong></p>
+        <div class="manual-actions">
+            <a class="button button-primary" href="/cdad-site/es/manual-usuario-rapido.html">Leer en español</a>
+            <a class="button button-secondary" href="/cdad-site/CDAD_V2.1_Quick_User_Manual.md">View original Markdown</a>
+        </div>
+    </div>
+
+    <article class="manual-content">
+        <div class="manual-callout">
+            <strong>Golden rule:</strong> AI may analyze, propose and execute; authority over governed decisions remains human.
+        </div>
+
+        <h2>1. The complete flow</h2>
+        <p>CDAD makes governance part of the normal workflow, so users do not have to manually manage every governance artifact.</p>
+        <pre>YOU define → delegate → review → accept/reject
+             ↓
+AGENT analyzes → implements what is allowed → proposes when needed
+             ↓
+CDAD records decisions → updates context → protects what was approved</pre>
+        <p><strong>Routine implementation:</strong> delegate. <strong>Governed decision change:</strong> Change Request → Proposal → human review → acceptance → ADR/context.</p>
+
+        <h2>2. First use: Bootstrap</h2>
+        <h3>Prepare the design</h3>
+        <p>Keep an initial design document in the project root with the vision, objective, main functionality, architecture, technology stack, constraints and known decisions. It does not need to be perfect, but it must clearly represent what you want to build.</p>
+        <h3>Incorporate CDAD</h3>
+        <p>Give the ADE this URL:</p>
+        <pre>https://github.com/CDAD-Community/cdad-bootstrap</pre>
+        <p>Then ask:</p>
+        <pre>Clone/incorporate CDAD Bootstrap into this project.
+Inspect the project and use my initial design document
+as the source for performing the CDAD Bootstrap.
+Do not invent decisions; if information is missing, ask me.</pre>
+        <p>The agent should inspect the project, identify the source document, detect conflicts, avoid guessing, map the design into CDAD artifacts and show you the result.</p>
+
+        <h2>3. The two confirmations</h2>
+        <h3>A. Does this design represent what I want to build?</h3>
+        <p>If not, correct the design and review it again. If yes, explicitly confirm it.</p>
+        <h3>B. Did CDAD correctly represent my solution?</h3>
+        <p>Review the vision, architecture, stack, principles, constraints and glossary. Correct anything that is wrong before freezing.</p>
+        <p><strong>These are different decisions and both matter.</strong></p>
+
+        <h2>4. Review the workspace and Freeze</h2>
+        <p>After Bootstrap you will find files such as <code>AGENTS.md</code>, <code>CHANGE-REQUEST.md</code>, <code>SOURCE-BRIEF.*</code> and a <code>cdad/</code> directory containing context, ADRs, proposals and scripts.</p>
+        <p>The quick architecture map is:</p>
+        <pre>cdad/context/stack.md</pre>
+        <p>Once the context is confirmed:</p>
+        <pre>cdad/scripts/cdad-freeze.sh</pre>
+        <p>After Freeze, the agent must use the governed context as its source of truth and must not modify it directly. Protection should not rely only on an agent promise.</p>
+
+        <h2>5. Normal development: delegate</h2>
+        <p>Once the context is frozen, delegate work within the established boundaries:</p>
+        <pre>Implement this functionality according to the governed CDAD
+context. Do not change architectural decisions.</pre>
+        <p>A Change Request is not needed for a bug fix, unit test, already-defined endpoint, refactor without a governed decision change or logging improvement.</p>
+
+        <h2>6. When to use <code>CHANGE-REQUEST.md</code></h2>
+        <p>Use it when changing a governed decision: database, cloud platform, framework, architectural pattern, integration, constraint, security or deployment decision, or when introducing a major component.</p>
+        <p>Explain what you want to change, why, the trigger, scope, impact, risks, alternatives and priority. Then ask the agent:</p>
+        <pre>Process the change request.</pre>
+
+        <h2>7. Proposal and human decision</h2>
+        <p>The agent generates a Proposal describing the current decision, requested change, proposed change, reason, impact, risks, alternatives and affected context elements. A Proposal is not an automatic decision.</p>
+        <table class="manual-table">
+            <thead><tr><th>Your decision</th><th>Result</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Accept</strong></td><td>The change may proceed through the governed process.</td></tr>
+                <tr><td><strong>Reject</strong></td><td>The architecture is not changed.</td></tr>
+                <tr><td><strong>Request changes</strong></td><td>The agent revises and completes the Proposal.</td></tr>
+            </tbody>
+        </table>
+        <p>Never accept a Proposal simply because AI generated it. Review what changes, why it changes, impact, risks and alternatives.</p>
+
+        <h2>8. ADR, context and map</h2>
+        <p>An accepted Proposal that represents a new architectural decision must be recorded as an ADR:</p>
+        <pre>Proposal → human approval → ADR → context/map → implementation</pre>
+        <p>The architecture map must follow the decision. Do not edit <code>stack.md</code> directly to bypass the process.</p>
+
+        <h2>9. What not to do</h2>
+        <ul>
+            <li>Do not directly edit frozen governed context.</li>
+            <li>Do not create copies to bypass protection.</li>
+            <li>Do not disable the guardrails.</li>
+            <li>Do not create a Proposal for every line of code.</li>
+            <li>Do not accept a Proposal without reading it.</li>
+        </ul>
+
+        <h2>10. Quick checklist</h2>
+        <ul>
+            <li>I prepared or defined the initial design.</li>
+            <li>I ran Bootstrap and confirmed the design.</li>
+            <li>I reviewed and confirmed the generated context.</li>
+            <li>I ran Freeze and checked the protection.</li>
+            <li>I delegate routine work without changing decisions.</li>
+            <li>I use <code>CHANGE-REQUEST.md</code> for governed changes.</li>
+            <li>I review and decide every Proposal.</li>
+            <li>I keep ADRs, context and the architecture map consistent.</li>
+        </ul>
+
+        <h2>Quick reference</h2>
+        <table class="manual-table">
+            <thead><tr><th>Situation</th><th>What you do</th></tr></thead>
+            <tbody>
+                <tr><td>New project</td><td>Bootstrap</td></tr>
+                <tr><td>Routine task or bug</td><td>Delegate, implement and validate</td></tr>
+                <tr><td>Architectural change</td><td><code>CHANGE-REQUEST.md</code></td></tr>
+                <tr><td>Proposal received</td><td>Review, accept, reject or request changes</td></tr>
+                <tr><td>Frozen context</td><td>Do not edit it directly</td></tr>
+            </tbody>
+        </table>
+        <div class="manual-callout">
+            <strong>Remember:</strong> define the intent, confirm the context, make the decisions, delegate implementation and review the result. <strong>Human First. AI Accelerated.</strong>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>CDAD — Context-Driven AI Development</p>
+    <p>Open Source · AI-Assisted Software Development</p>
+</footer>
+<script src="/cdad-site/assets/js/config.js"></script>
+<script src="/cdad-site/assets/js/language-switcher.js"></script>
+</body>
+</html>
