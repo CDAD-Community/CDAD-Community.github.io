@@ -12,7 +12,7 @@ Successfully implemented a professional, production-grade multilingual architect
 ### ✅ Directory Structure
 
 ```
-/cdad-site/
+/
 ├── index.html                    (Root: language detection)
 ├── en/index.html                 (English homepage)
 ├── es/index.html                 (Spanish homepage)
@@ -65,8 +65,8 @@ Successfully implemented a professional, production-grade multilingual architect
 
 **Canonical URLs:**
 ```html
-<link rel="canonical" href="https://mgriott.github.io/cdad-site/en/">
-<link rel="canonical" href="https://mgriott.github.io/cdad-site/es/">
+<link rel="canonical" href="https://cdad-community.github.io/en/">
+<link rel="canonical" href="https://cdad-community.github.io/es/">
 ```
 
 **hreflang Tags:**
@@ -231,14 +231,14 @@ Successfully implemented a professional, production-grade multilingual architect
 
 ### Accessing the Site
 
-1. **Root (auto-detect):** `https://mgriott.github.io/cdad-site/`
+1. **Root (auto-detect):** `https://cdad-community.github.io/`
    - Detects browser language
    - Defaults to English
    - Shows 3-second countdown
 
-2. **English:** `https://mgriott.github.io/cdad-site/en/`
+2. **English:** `https://cdad-community.github.io/en/`
 
-3. **Spanish:** `https://mgriott.github.io/cdad-site/es/`
+3. **Spanish:** `https://cdad-community.github.io/es/`
 
 ### Language Switcher
 
@@ -311,7 +311,7 @@ Successfully implemented a professional, production-grade multilingual architect
 The site is deployed on GitHub Pages and accessible at:
 
 ```
-https://mgriott.github.io/cdad-site/
+https://cdad-community.github.io/
 ```
 
 No additional deployment steps needed — changes in Git are automatically published.

@@ -6,9 +6,9 @@
     <title>CDAD — Context-Driven AI Development</title>
     <meta name="description" content="CDAD is a governance approach for AI-assisted software development combining specifications, context engineering, and protection patterns.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mgriott.github.io/cdad-site/">
+    <link rel="canonical" href="https://cdad-community.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mgriott.github.io/cdad-site/">
+    <meta property="og:url" content="https://cdad-community.github.io/">
     <meta property="og:title" content="CDAD — Context-Driven AI Development">
     <meta property="og:description" content="A governance approach for AI-assisted software development with AI coding agents.">
     <style>
@@ -84,8 +84,8 @@
         <h1>CDAD</h1>
         <p>Context-Driven AI Development</p>
         <div class="buttons">
-            <a href="/cdad-site/en/" class="button button-primary">English</a>
-            <a href="/cdad-site/es/" class="button button-secondary">Español</a>
+            <a href="/en/" class="button button-primary">English</a>
+            <a href="/es/" class="button button-secondary">Español</a>
         </div>
         <div class="messages">
             <p id="detection-message"></p>
@@ -102,12 +102,12 @@
             if (isSpanish) {
                 msg.textContent = 'Redirección automática en 3 segundos... (Detected: Spanish)';
                 setTimeout(() => {
-                    window.location.href = '/cdad-site/es/';
+                    window.location.href = '/es/';
                 }, 3000);
             } else {
                 msg.textContent = 'Redirecting to English in 3 seconds... (Detected: ' + browserLang + ')';
                 setTimeout(() => {
-                    window.location.href = '/cdad-site/en/';
+                    window.location.href = '/en/';
                 }, 3000);
             }
         })();

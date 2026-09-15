@@ -69,8 +69,8 @@ pages: {
         methodology: {
             title: 'CDAD Methodology',
             description: 'Deep dive into CDAD concepts...',
-            canonical: '/cdad-site/en/methodology',
-            ogImage: '/cdad-site/assets/images/cdad.png'
+            canonical: '/en/methodology',
+            ogImage: '/assets/images/cdad.png'
         }
     }
 }
@@ -110,8 +110,8 @@ pages: {
         metodologia: {
             title: 'Metodología CDAD',
             description: 'Profundiza en los conceptos de CDAD...',
-            canonical: '/cdad-site/es/metodologia',
-            ogImage: '/cdad-site/assets/images/cdad.png'
+            canonical: '/es/metodologia',
+            ogImage: '/assets/images/cdad.png'
         }
     }
 }
@@ -123,17 +123,17 @@ Add URLs to `sitemap.xml`:
 
 ```xml
 <url>
-    <loc>https://mgriott.github.io/cdad-site/en/methodology</loc>
+    <loc>https://cdad-community.github.io/en/methodology</loc>
     <lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/metodologia"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/metodologia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/methodology"/>
 </url>
 
 <url>
-    <loc>https://mgriott.github.io/cdad-site/es/metodologia</loc>
+    <loc>https://cdad-community.github.io/es/metodologia</loc>
     <lastmod>2026-09-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/methodology"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/methodology"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/methodology"/>
 </url>
 ```
 
@@ -217,14 +217,14 @@ pages: {
         home: {
             title: 'CDAD — Context-Driven AI Development',
             description: 'Descrição em português...',
-            canonical: '/cdad-site/pt/',
-            ogImage: '/cdad-site/assets/images/cdad.png'
+            canonical: '/pt/',
+            ogImage: '/assets/images/cdad.png'
         },
         sobre: {
             title: 'Sobre CDAD',
             description: '...',
-            canonical: '/cdad-site/pt/sobre',
-            ogImage: '/cdad-site/assets/images/cdad.png'
+            canonical: '/pt/sobre',
+            ogImage: '/assets/images/cdad.png'
         }
         // ... rest of pages
     }
@@ -245,7 +245,7 @@ Add Portuguese URLs with hreflang tags:
 
 ```xml
 <url>
-    <loc>https://mgriott.github.io/cdad-site/pt/</loc>
+    <loc>https://cdad-community.github.io/pt/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="..."/>
     <xhtml:link rel="alternate" hreflang="es" href="..."/>
     <xhtml:link rel="alternate" hreflang="x-default" href="..."/>

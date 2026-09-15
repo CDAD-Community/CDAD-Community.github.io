@@ -4,145 +4,145 @@
 
     <!-- Root -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/</loc>
+        <loc>https://cdad-community.github.io/</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>1.0</priority>
     </url>
 
     <!-- English -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/</loc>
+        <loc>https://cdad-community.github.io/en/</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/"/>
     </url>
 
     <!-- Spanish -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/</loc>
+        <loc>https://cdad-community.github.io/es/</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/"/>
     </url>
 
     <!-- Quick User Manual -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/quick-user-manual.html</loc>
+        <loc>https://cdad-community.github.io/en/quick-user-manual.html</loc>
         <lastmod>2026-09-15</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/manual-usuario-rapido.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/manual-usuario-rapido.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/quick-user-manual.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/manual-usuario-rapido.html</loc>
+        <loc>https://cdad-community.github.io/es/manual-usuario-rapido.html</loc>
         <lastmod>2026-09-15</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/quick-user-manual.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/quick-user-manual.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/quick-user-manual.html"/>
     </url>
 
     <!-- English Secondary Pages -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/about</loc>
+        <loc>https://cdad-community.github.io/en/about.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/acerca"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/about"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/acerca.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/about.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/problem</loc>
+        <loc>https://cdad-community.github.io/en/problem.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/problema"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/problem"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/problema.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/problem.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/approach</loc>
+        <loc>https://cdad-community.github.io/en/approach.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/enfoque"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/approach"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/enfoque.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/approach.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/ecosystem</loc>
+        <loc>https://cdad-community.github.io/en/ecosystem.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/ecosistema"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/ecosystem"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/ecosistema.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/ecosystem.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/methodology</loc>
+        <loc>https://cdad-community.github.io/en/methodology.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/metodologia"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/metodologia.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/methodology.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/cdad-2-1</loc>
+        <loc>https://cdad-community.github.io/en/cdad-2-1.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/cdad-2-1"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/cdad-2-1"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/cdad-2-1.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/cdad-2-1.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/en/faq</loc>
+        <loc>https://cdad-community.github.io/en/faq.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/preguntas-frecuentes"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/faq"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/preguntas-frecuentes.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/faq.html"/>
     </url>
 
     <!-- Spanish Secondary Pages -->
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/acerca</loc>
+        <loc>https://cdad-community.github.io/es/acerca.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/about"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/about"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/about.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/about.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/problema</loc>
+        <loc>https://cdad-community.github.io/es/problema.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/problem"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/problem"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/problem.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/problem.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/enfoque</loc>
+        <loc>https://cdad-community.github.io/es/enfoque.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/approach"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/approach"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/approach.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/approach.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/ecosistema</loc>
+        <loc>https://cdad-community.github.io/es/ecosistema.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/ecosystem"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/ecosystem"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/ecosystem.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/ecosystem.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/metodologia</loc>
+        <loc>https://cdad-community.github.io/es/metodologia.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/methodology"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/methodology"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/methodology.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/methodology.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/cdad-2-1</loc>
+        <loc>https://cdad-community.github.io/es/cdad-2-1.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/cdad-2-1"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/cdad-2-1"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/cdad-2-1.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/cdad-2-1.html"/>
     </url>
     <url>
-        <loc>https://mgriott.github.io/cdad-site/es/preguntas-frecuentes</loc>
+        <loc>https://cdad-community.github.io/es/preguntas-frecuentes.html</loc>
         <lastmod>2026-09-13</lastmod>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/faq"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/faq"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/faq.html"/>
     </url>
 
 </urlset>

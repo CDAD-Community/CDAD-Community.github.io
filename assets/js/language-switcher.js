@@ -94,55 +94,23 @@ class LanguageSwitcher {
     }
 
     getTranslatedPath(lang) {
-        const path = window.location.pathname;
         const currentLang = this.getLanguageFromPath();
-
-        // Map of URL paths between languages
-        const pathMap = {
-            'en': {
-                '/': '/en/',
-                '/about': '/about',
-                '/problem': '/problem',
-                '/approach': '/approach',
-                '/ecosystem': '/ecosystem',
-                '/methodology': '/methodology',
-                '/cdad-2-1': '/cdad-2-1',
-                '/cdad-v3': '/cdad-v3',
-                '/faq': '/faq',
-                '/quick-user-manual.html': '/quick-user-manual.html'
-            },
-            'es': {
-                '/': '/es/',
-                '/acerca': '/acerca',
-                '/problema': '/problema',
-                '/enfoque': '/enfoque',
-                '/ecosistema': '/ecosistema',
-                '/metodologia': '/metodologia',
-                '/cdad-2-1': '/cdad-2-1',
-                '/cdad-v3': '/cdad-v3',
-                '/preguntas-frecuentes': '/preguntas-frecuentes',
-                '/manual-usuario-rapido.html': '/manual-usuario-rapido.html'
-            }
+        const path = window.location.pathname;
+        const cleanPath = path.replace(/^\/(en|es)(?:\/)?/, '');
+        const translations = {
+            'about.html': { en: 'about.html', es: 'acerca.html' },
+            'problem.html': { en: 'problem.html', es: 'problema.html' },
+            'approach.html': { en: 'approach.html', es: 'enfoque.html' },
+            'ecosystem.html': { en: 'ecosistema.html', es: 'ecosistema.html' },
+            'methodology.html': { en: 'methodology.html', es: 'metodologia.html' },
+            'cdad-2-1.html': { en: 'cdad-2-1.html', es: 'cdad-2-1.html' },
+            'cdad-v3.html': { en: 'cdad-v3.html', es: 'cdad-v3.html' },
+            'faq.html': { en: 'faq.html', es: 'preguntas-frecuentes.html' },
+            'quick-user-manual.html': { en: 'quick-user-manual.html', es: 'manual-usuario-rapido.html' },
+            'manual-usuario-rapido.html': { en: 'quick-user-manual.html', es: 'manual-usuario-rapido.html' }
         };
-
-        // Remove current language prefix
-        let cleanPath = path.replace(/^\/(en|es)/, '');
-        if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
-
-        if (currentLang === 'en' && lang === 'es' &&
-            cleanPath === '/quick-user-manual.html') {
-            cleanPath = '/manual-usuario-rapido.html';
-        } else if (currentLang === 'es' && lang === 'en' &&
-                   cleanPath === '/manual-usuario-rapido.html') {
-            cleanPath = '/quick-user-manual.html';
-        }
-
-        // Build new path with new language
-        if (lang === 'en') {
-            return '/' + lang + cleanPath;
-        } else {
-            return '/' + lang + cleanPath;
-        }
+        const translatedPath = translations[cleanPath]?.[lang] || '';
+        return translatedPath ? `/${lang}/${translatedPath}` : `/${lang}/`;
     }
 }
 

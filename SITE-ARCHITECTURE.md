@@ -19,10 +19,12 @@ The CDAD website is a **static HTML site** with **professional multilingual supp
 ├── index.html                         # Root: language detection & redirect
 ├── en/
 │   ├── index.html                     # English homepage
+│   ├── quick-user-manual.html         # English CDAD V2.1 quick manual
 │   ├── about.html                     # Additional pages
 │   └── ...
 ├── es/
 │   ├── index.html                     # Spanish homepage
+│   ├── manual-usuario-rapido.html     # Spanish CDAD V2.1 quick manual
 │   ├── acerca.html                    # Additional pages
 │   └── ...
 ├── assets/
@@ -57,6 +59,7 @@ The CDAD website is a **static HTML site** with **professional multilingual supp
 /en/cdad-2-1                   # CDAD 2.1
 /en/cdad-v3                    # CDAD v3 (proposed)
 /en/faq                        # FAQ
+/en/quick-user-manual.html     # CDAD V2.1 Quick User Manual
 ```
 
 ### Spanish
@@ -71,6 +74,7 @@ The CDAD website is a **static HTML site** with **professional multilingual supp
 /es/cdad-2-1                   # CDAD 2.1
 /es/cdad-v3                    # CDAD v3 (propuesto)
 /es/preguntas-frecuentes       # Preguntas Frecuentes
+/es/manual-usuario-rapido.html # Manual de Usuario Rápido CDAD V2.1
 ```
 
 ## SEO Configuration
@@ -81,12 +85,12 @@ Each page declares its canonical URL in the `<head>`:
 
 **English:**
 ```html
-<link rel="canonical" href="https://mgriott.github.io/cdad-site/en/">
+<link rel="canonical" href="https://cdad-community.github.io/en/">
 ```
 
 **Spanish:**
 ```html
-<link rel="canonical" href="https://mgriott.github.io/cdad-site/es/">
+<link rel="canonical" href="https://cdad-community.github.io/es/">
 ```
 
 ### Language Attributes
@@ -103,9 +107,9 @@ Each page declares its language:
 Each page links to its alternate language version:
 
 ```html
-<link rel="alternate" hreflang="en" href="https://mgriott.github.io/cdad-site/en/...">
-<link rel="alternate" hreflang="es" href="https://mgriott.github.io/cdad-site/es/...">
-<link rel="alternate" hreflang="x-default" href="https://mgriott.github.io/cdad-site/en/...">
+<link rel="alternate" hreflang="en" href="https://cdad-community.github.io/en/...">
+<link rel="alternate" hreflang="es" href="https://cdad-community.github.io/es/...">
+<link rel="alternate" hreflang="x-default" href="https://cdad-community.github.io/en/...">
 ```
 
 ### Open Graph & Twitter Metadata
@@ -327,7 +331,7 @@ The site is hosted on GitHub Pages:
 
 ```
 Repository: github.com/mgriott/cdad-site
-URL: https://mgriott.github.io/cdad-site/
+URL: https://cdad-community.github.io/
 Branch: main (or gh-pages)
 ```
 
