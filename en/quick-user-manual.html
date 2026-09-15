@@ -41,7 +41,7 @@
 
     <article class="manual-content">
         <div class="manual-callout">
-            <strong>Golden rule:</strong> AI may analyze, propose and execute; authority over governed decisions remains human.
+            <strong>Golden rule:</strong> AI may analyze, propose and execute; authority over governed decisions remains human. CDAD may intentionally introduce friction into rapid development to guide users toward compliance with the project's standards, rules and governance requirements.
         </div>
 
         <h2>1. The complete flow</h2>
@@ -143,6 +143,86 @@ context. Do not change architectural decisions.</pre>
         </table>
         <div class="manual-callout">
             <strong>Remember:</strong> define the intent, confirm the context, make the decisions, delegate implementation and review the result. <strong>Human First. AI Accelerated.</strong>
+        </div>
+
+        <h2>11. How to use Epics, Stories and Backlog</h2>
+        <div class="manual-callout">
+            <strong>📋 Epics, Stories &amp; Backlog</strong><br>
+            You can provide Epics and Stories inside the initial design document or in a separate requirements/backlog document. CDAD analyzes both sources during Bootstrap and incorporates them into <code>cdad/backlog.md</code>. You do not need to prepare that file manually.
+        </div>
+
+        <h3>1. Two ways to provide the backlog</h3>
+        <p><strong>Option A — Everything is in the initial document.</strong> The document may include the product vision, objectives, architecture, technology stack, constraints, Epics and Stories.</p>
+        <pre>Design Document
+│
+├── Product Vision
+├── Architecture
+├── Technology Stack
+├── Constraints
+├── EPIC-001: User Management
+│   ├── STORY-001: Register user
+│   ├── STORY-002: Login
+│   └── STORY-003: Reset password
+│
+└── EPIC-002: Notifications
+    ├── STORY-004: Email notification
+    └── STORY-005: WhatsApp notification</pre>
+        <p>During Bootstrap, the ADE must identify Epics and Stories, validate completeness, detect inconsistencies, avoid inventing Stories, map them to the CDAD backlog, ask for clarification and present the result for confirmation.</p>
+
+        <p><strong>Option B — Design and backlog are separate.</strong> You may provide, for example:</p>
+        <pre>design.md
+backlog.md</pre>
+        <p>or:</p>
+        <pre>architecture.md
+product-requirements.md
+epics-and-stories.md</pre>
+        <p>The Epics and Stories document is a requirements source. The ADE must analyze it rather than simply copy it: it must check Epics, Stories, IDs, duplicates, relationships, scope, consistency with the vision and consistency with the architecture. If contradictions are found, it must ask the user.</p>
+
+        <h3>2. What CDAD does with it</h3>
+        <p>The confirmed result is stored in:</p>
+        <pre>cdad/backlog.md</pre>
+        <p>This file becomes the governed development line.</p>
+        <pre>SOURCE-BRIEF / Design Document
+              +
+      Epics &amp; Stories
+              ↓
+        CDAD Bootstrap
+              ↓
+       cdad/backlog.md</pre>
+        <p>The backlog answers <strong>what we are going to build and what comes next</strong>. The context answers <strong>within which architecture and decisions we are going to build it</strong>.</p>
+
+        <h3>3. CDAD does not invent the backlog</h3>
+        <p>If you provide <code>EPIC-001</code> with <code>STORY-001</code> and <code>STORY-002</code>, the agent must not magically create additional Stories merely because they seem necessary. If it detects a possible gap, it should ask:</p>
+        <pre>I detected that completing EPIC-001 may require a Story
+related to X. Would you like to add it?</pre>
+        <p>The decision remains with the user. This preserves traceability between intent and backlog.</p>
+
+        <h3>4. After Bootstrap</h3>
+        <p>Once the context and backlog are confirmed:</p>
+        <pre>Design → Epics → Stories → Human Confirmation → Freeze → Development</pre>
+        <p>Before starting work, the agent must inspect the backlog and determine which Epic and Story apply:</p>
+        <pre>I will implement STORY-003 — Reset password.</pre>
+        <p>Implementation must respect the governed context, ADRs, Epic and Story.</p>
+
+        <h3>5. Adding an Epic after Freeze</h3>
+        <p>Adding a structural or material Epic after Freeze requires the governed change mechanism:</p>
+        <pre>CHANGE-REQUEST.md
+        ↓
+Proposal
+        ↓
+Human Review
+        ↓
+Approval
+        ↓
+Promotion
+        ↓
+cdad/backlog.md</pre>
+        <p>When a promotion script exists, the approved Proposal is applied through the corresponding script, for example:</p>
+        <pre>bash cdad/proposals/apply-....sh</pre>
+        <p>This keeps the promoted backlog traceable and prevents a silent AI modification.</p>
+
+        <div class="manual-callout">
+            <strong>Simple rule:</strong> Design + Epics + Stories → CDAD → Governed Context + Backlog → AI → Implementation. Once confirmed, <code>cdad/backlog.md</code> becomes the project's governed development line.
         </div>
     </article>
 </main>

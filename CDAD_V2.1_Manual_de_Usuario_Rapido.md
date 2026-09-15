@@ -29,7 +29,10 @@ contrario: CDAD protege tu autoridad.**
 La regla de oro:
 
 > **La IA puede analizar, proponer y ejecutar. La autoridad sobre las
-> decisiones gobernadas sigue siendo humana.**
+> decisiones gobernadas sigue siendo humana. CDAD puede introducir
+> fricción deliberada en el desarrollo rápido para guiar al usuario hacia
+> el cumplimiento de los estándares, las reglas y la gobernabilidad del
+> proyecto.**
 
 ------------------------------------------------------------------------
 
@@ -821,3 +824,230 @@ Si quieres recordar solo una cosa, recuerda esto:
 > **Human First. AI Accelerated.**
 >
 > **Context is the Source of Truth.**
+
+------------------------------------------------------------------------
+
+# 25. Cómo usar Epics, Stories y Backlog
+
+> **📋 Epics, Stories & Backlog**
+>
+> Puedes entregar tus Epics y Stories dentro del documento inicial de
+> diseño o en un documento separado de requisitos/backlog. CDAD tomará
+> ambas fuentes durante el Bootstrap, las analizará y las incorporará a
+> `cdad/backlog.md`. No necesitas preparar ese archivo manualmente.
+
+## 25.1. Dos formas de entregar el backlog
+
+### Opción A — Todo viene en el documento inicial
+
+El usuario puede entregar un único documento con:
+
+-   visión;
+-   objetivos;
+-   arquitectura;
+-   stack tecnológico;
+-   restricciones;
+-   Epics;
+-   Stories.
+
+``` text
+Design Document
+│
+├── Product Vision
+├── Architecture
+├── Technology Stack
+├── Constraints
+├── EPIC-001: User Management
+│   ├── STORY-001: Register user
+│   ├── STORY-002: Login
+│   └── STORY-003: Reset password
+│
+└── EPIC-002: Notifications
+    ├── STORY-004: Email notification
+    └── STORY-005: WhatsApp notification
+```
+
+El usuario entrega ese documento al ADE durante el Bootstrap.
+
+El ADE debe:
+
+-   identificar las Epics y Stories;
+-   validar que estén completas;
+-   detectar inconsistencias;
+-   no inventar Stories;
+-   mapearlas al backlog CDAD;
+-   pedir aclaraciones si falta información;
+-   presentar el resultado para confirmación.
+
+### Opción B — El diseño y el backlog vienen separados
+
+También es válido entregar:
+
+``` text
+design.md
+backlog.md
+```
+
+o:
+
+``` text
+architecture.md
+product-requirements.md
+epics-and-stories.md
+```
+
+El documento de Epics y Stories es una fuente de requisitos. El ADE debe
+analizarlo, no simplemente copiarlo. Debe comprobar:
+
+-   Epics;
+-   Stories;
+-   IDs;
+-   duplicados;
+-   relaciones;
+-   alcance;
+-   consistencia con la visión;
+-   consistencia con la arquitectura.
+
+Si encuentra contradicciones, debe preguntar al usuario.
+
+## 25.2. Qué hace CDAD con eso
+
+El resultado confirmado debe quedar en:
+
+``` text
+cdad/backlog.md
+```
+
+Ese archivo pasa a ser la línea de desarrollo gobernada.
+
+``` text
+SOURCE-BRIEF / Design Document
+              +
+      Epics & Stories
+              ↓
+        CDAD Bootstrap
+              ↓
+       cdad/backlog.md
+```
+
+El backlog responde:
+
+> **¿Qué vamos a construir y qué sigue ahora?**
+
+El contexto responde:
+
+> **¿Dentro de qué arquitectura y decisiones vamos a construirlo?**
+
+## 25.3. CDAD no inventa el backlog
+
+Si el usuario entrega:
+
+``` text
+EPIC-001
+  STORY-001
+  STORY-002
+```
+
+el agente no debe crear mágicamente `STORY-003`, `STORY-004` o
+`STORY-005` solo porque parezcan necesarias.
+
+Si detecta que falta algo, debe preguntar:
+
+``` text
+Detecté que para completar EPIC-001 parece faltar una Story
+relacionada con X. ¿Quieres agregarla?
+```
+
+La decisión sigue siendo del usuario. Esto mantiene la trazabilidad entre
+intención y backlog.
+
+## 25.4. Qué pasa después del Bootstrap
+
+Una vez confirmado el contexto y el backlog:
+
+``` text
+Design
+   ↓
+Epics
+   ↓
+Stories
+   ↓
+Human Confirmation
+   ↓
+Freeze
+   ↓
+Development
+```
+
+Antes de comenzar, el agente debe consultar el backlog y determinar qué
+Epic y Story corresponden al trabajo:
+
+``` text
+Voy a implementar STORY-003 — Reset password.
+```
+
+Entonces trabaja dentro de:
+
+``` text
+Contexto gobernado
+        +
+ADR
+        +
+Epic
+        +
+Story
+        ↓
+Implementation
+```
+
+## 25.5. Agregar una Epic después de Freeze
+
+Si quieres agregar `EPIC-003` después de Freeze y el cambio es
+estructural o material, debe pasar por el mecanismo gobernado:
+
+``` text
+CHANGE-REQUEST.md
+        ↓
+Proposal
+        ↓
+Human Review
+        ↓
+Approval
+        ↓
+Promotion
+        ↓
+cdad/backlog.md
+```
+
+Con la mejora de promoción de V2.1:
+
+``` text
+Proposal
+   +
+Promotion .sh
+        ↓
+Human reviews
+        ↓
+bash cdad/proposals/apply-....sh
+        ↓
+Backlog promoted
+```
+
+## 25.6. Regla sencilla
+
+``` text
+LO QUE QUIERO CONSTRUIR
+        ↓
+Design + Epics + Stories
+        ↓
+       CDAD
+        ↓
+GOVERNED CONTEXT + BACKLOG
+        ↓
+       AI
+        ↓
+IMPLEMENTATION
+```
+
+Una vez confirmado, `cdad/backlog.md` se convierte en la línea de
+desarrollo gobernada del proyecto.
