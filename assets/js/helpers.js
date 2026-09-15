@@ -75,6 +75,10 @@ function generateHeader(lang) {
                class="nav-github" target="_blank" rel="noopener">
                 GitHub
             </a>
+            <a href="https://github.com/CDAD-Community/cdad-docs"
+               class="nav-github" target="_blank" rel="noopener">
+                CDAD Docs
+            </a>
         </div>
     </div>
 </nav>`;
